@@ -2,34 +2,34 @@
 
 let count = 0;
 
-(function() {
+(function () {
   const queryInfo = {
     active: true,
-    currentWindow: true
+    currentWindow: true,
   };
 
-  chrome.tabs.query(queryInfo, function(tabs) {
+  chrome.tabs.query(queryInfo, (tabs) => {
     document.getElementById('url').innerText = tabs[0].url;
     document.getElementById('time').innerText = new Date().toLocaleString();
   });
 
-  chrome.browserAction.setBadgeText({text: count.toString()});
-  document.getElementById('countUp').onclick  = () =>{
-    chrome.browserAction.setBadgeText({text: (++count).toString()});
+  chrome.browserAction.setBadgeText({ text: count.toString() });
+  document.getElementById('countUp').onclick = () => {
+    chrome.browserAction.setBadgeText({ text: (++count).toString() });
   };
 
-  document.getElementById('changeBackground').onclick  = () =>{
+  document.getElementById('changeBackground').onclick = () => {
     // chrome.tabs.executeScript({code: 'console.log("running this")' ,file: './extractPageContent'})
-    chrome.tabs.query({active: true, currentWindow: true}, function(tabs) {
+    chrome.tabs.query({ active: true, currentWindow: true }, (tabs) => {
       chrome.tabs.sendMessage(tabs[0].id, {
         // TO run a querry/function to the Tab ID
         // Call extract & parse info
-        color: '#555555'
+        color: '#555555',
       },
-      function(msg) {
+      (msg) => {
         // Callbck to update the UI
-        console.log("result message:", msg);
+        console.log('result message:', msg);
       });
     });
   };
-})();
+}());
