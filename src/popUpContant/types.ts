@@ -3,13 +3,13 @@ export const enum Quality {
   REPLACE_LATER = 'REPLACE_LATER',
   GOOD = 'GOOD',
   NA = 'NA',
-};
+}
 
 export const enum SailType {
   FURLING = 'FURLING',
   STANDARD = 'STANDARD',
   NA = 'NA',
-};
+}
 
 export interface CommentsStructure {
   user: string,
@@ -29,7 +29,7 @@ interface Sail extends BoatFeature {
     type: SailType,
 }
 
-interface EngineDetails extends BoatFeature  {
+interface EngineDetails extends BoatFeature {
   power: number,
   nbrHours: number,
 }
