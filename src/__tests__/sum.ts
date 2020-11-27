@@ -1,5 +1,5 @@
 /* eslint-env jest */
-import sum from '../sum.ts';
+import sum from '../sum';
 
 describe('sum', () => {
   it('1 + 1 = 2', () => {
