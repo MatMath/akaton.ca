@@ -1,26 +1,24 @@
-import * as moment from 'moment';
-import * as $ from 'jquery';
 // import { extractPageContent } from './exractPageContent';
 
 let count = 0;
 
-$(function() {
+(function() {
   const queryInfo = {
     active: true,
     currentWindow: true
   };
 
   chrome.tabs.query(queryInfo, function(tabs) {
-    $('#url').text(tabs[0].url);
-    $('#time').text(moment().format('YYYY-MM-DD HH:mm:ss'));
+    document.getElementById('url').innerText = tabs[0].url;
+    document.getElementById('time').innerText = new Date().toLocaleString();
   });
 
   chrome.browserAction.setBadgeText({text: count.toString()});
-  $('#countUp').click(()=>{
+  document.getElementById('countUp').onclick  = () =>{
     chrome.browserAction.setBadgeText({text: (++count).toString()});
-  });
+  };
 
-  $('#changeBackground').click(()=>{
+  document.getElementById('changeBackground').onclick  = () =>{
     // chrome.tabs.executeScript({code: 'console.log("running this")' ,file: './extractPageContent'})
     chrome.tabs.query({active: true, currentWindow: true}, function(tabs) {
       chrome.tabs.sendMessage(tabs[0].id, {
@@ -33,5 +31,5 @@ $(function() {
         console.log("result message:", msg);
       });
     });
-  });
-});
+  };
+})();
