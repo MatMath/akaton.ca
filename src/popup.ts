@@ -15,7 +15,7 @@ let count = 0;
 
   chrome.browserAction.setBadgeText({ text: count.toString() });
   document.getElementById('countUp').onclick = () => {
-    chrome.browserAction.setBadgeText({ text: (++count).toString() });
+    chrome.browserAction.setBadgeText({ text: (count += 1).toString() });
   };
 
   document.getElementById('changeBackground').onclick = () => {

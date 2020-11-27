@@ -1,34 +1,33 @@
-import * as $ from 'jquery';
-
 // Saves options to chrome.storage.sync.
-function save_options() {
-  const color = $('#color').val();
-  const likesColor = $('#like').prop('checked');
+function saveOptions() {
+  const colorEl = document.getElementById('color');
+  const color = colorEl.options[colorEl.selectedIndex].value;
+  const likesColor = document.getElementById('like').setAttribute('checked', 'checked');
   chrome.storage.sync.set({
     favoriteColor: color,
     likesColor,
   }, () => {
     // Update status to let user know options were saved.
-    const status = $('#status');
-    status.text('Options saved.');
+    const status = document.getElementById('status');
+    status.innerText = 'Options saved.';
     setTimeout(() => {
-      status.text('');
+      status.innerText = '';
     }, 750);
   });
 }
 
 // Restores select box and checkbox state using the preferences
 // stored in chrome.storage.
-function restore_options() {
+function restoreOptions() {
   // Use default value color = 'red' and likesColor = true.
   chrome.storage.sync.get({
     favoriteColor: 'red',
     likesColor: true,
   }, (items: {favoriteColor, likesColor}) => {
-    $('#color').val(items.favoriteColor);
-    $('#like').prop('checked', items.likesColor);
+    document.getElementById('color').value = items.favoriteColor;
+    document.getElementById('like').setAttribute('checked', items.likesColor);
   });
 }
 
-$('#save').click(save_options);
-$(restore_options); // document.addEventListener('DOMContentLoaded', restore_options);
+document.getElementById('save').onclick = saveOptions;
+document.addEventListener('DOMContentLoaded', restoreOptions);
