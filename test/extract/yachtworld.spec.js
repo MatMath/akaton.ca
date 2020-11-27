@@ -16,6 +16,7 @@ describe('yachtworld', () => {
       keyword: /engine..............+[\n<]/gi,
       text: data
     });
+    console.log(result);
     expect(result.join(' ')).toContain('Yanmar');
   });
 });
