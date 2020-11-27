@@ -1,3 +1,3 @@
 export default () => {
-    console.log('Reached here')
-}
+  console.log('Reached here');
+};

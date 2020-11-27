@@ -8,7 +8,7 @@
     "build": "webpack --config webpack/webpack.prod.js",
     "clean": "rimraf dist",
     "test": "jest",
-    "lint": "eslint ."
+    "lint": "eslint . --ext .json,.js,.ts"
   },
   "repository": {
     "type": "git",
@@ -16,10 +16,7 @@
   },
   "author": "",
   "license": "MIT",
-  "dependencies": {
-    "jquery": "^3.5.0",
-    "moment": "~2.24.0"
-  },
+  "dependencies": {},
   "devDependencies": {
     "@types/chrome": "0.0.100",
     "@types/jest": "^25.1.4",
@@ -30,6 +27,7 @@
     "eslint": "^7.14.0",
     "eslint-config-airbnb-base": "^14.2.1",
     "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-json": "^2.1.2",
     "jest": "^25.1.0",
     "rimraf": "^3.0.2 ",
     "ts-jest": "^25.2.1 ",

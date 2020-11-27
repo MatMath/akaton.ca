@@ -1,31 +1,44 @@
 {
   "manifest_version": 2,
-
   "name": "Akaton",
   "description": "Comparing boat",
   "version": "1.0",
-
+  "icons": {
+    "24": "ic_akaton_24.png",
+    "48": "ic_akaton_48.png",
+    "96": "ic_akaton_96.png",
+    "216": "akaton_foreground216.png"
+  },
   "options_ui": {
     "page": "options.html",
     "chrome_style": true
   },
-
   "browser_action": {
-    "default_icon": "icon.png",
+    "default_icon": {
+      "24": "ic_akaton_24.png",
+      "48": "ic_akaton_48.png",
+      "96": "ic_akaton_96.png",
+      "216": "akaton_foreground216.png"
+    },
     "default_popup": "popup.html"
   },
-
   "content_scripts": [
-      {
-          "matches": ["<all_urls>"],
-          "js": ["js/vendor.js", "js/content_script.js"]
-      }
+    {
+      "matches": [
+        "<all_urls>"
+      ],
+      "js": [
+        "js/vendor.js",
+        "js/content_script.js"
+      ]
+    }
   ],
-
   "background": {
-    "scripts": ["js/vendor.js", "js/background.js"]
+    "scripts": [
+      "js/vendor.js",
+      "js/background.js"
+    ]
   },
-
   "permissions": [
     "storage",
     "<all_urls>"
