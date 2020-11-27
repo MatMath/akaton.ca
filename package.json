@@ -15,8 +15,6 @@
   },
   "author": "",
   "license": "MIT",
-    "moment": "~2.24.0"
-  },
   "dependencies": {
     "jquery": "^3.5.0",
     "moment": "~2.24.0"
