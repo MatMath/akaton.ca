@@ -14,7 +14,7 @@ describe('yachtworld', () => {
   it('should find the engine info', () => {
     const result = extract({
       keyword: /engine..............+[\n<]/gi,
-      text: data
+      text: data,
     });
     console.log(result);
     expect(result.join(' ')).toContain('Yanmar');
