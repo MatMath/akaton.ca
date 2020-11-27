@@ -1,7 +1,7 @@
 // Saves options to chrome.storage.sync.
 function saveOptions() {
   const colorEl = document.getElementById('color');
-  const color = colorEl.options[colorEl.selectedIndex].value;
+  const color = 'blue' ; //colorEl.options[colorEl.selectedIndex].value;
   const likesColor = document.getElementById('like').setAttribute('checked', 'checked');
   chrome.storage.sync.set({
     favoriteColor: color,
@@ -24,7 +24,7 @@ function restoreOptions() {
     favoriteColor: 'red',
     likesColor: true,
   }, (items: {favoriteColor, likesColor}) => {
-    document.getElementById('color').value = items.favoriteColor;
+    // document.getElementById('color').value = items.favoriteColor;
     document.getElementById('like').setAttribute('checked', items.likesColor);
   });
 }
