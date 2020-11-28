@@ -2,7 +2,7 @@
 
 let count = 0;
 
-(function () {
+(function loadPopup() {
   const queryInfo = {
     active: true,
     currentWindow: true,

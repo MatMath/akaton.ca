@@ -107,14 +107,13 @@ export const getInitialDefaultValue = (): GenericBoatInformation => ({
   },
 });
 
-export const saveDefaultValueToStorage = (value: GenericBoatInformation): Promise<void> =>
+export const saveDefaultValueToStorage = (value: GenericBoatInformation): Promise<void> => new Promise((resolve) => {
   // add deppmerge
-  new Promise((resolve) => {
-    const mergedValue = { ...getInitialDefaultValue(), ...value }; // TODO change to a deepJSON merge.
-    chrome.storage.sync.set({ defaultValue: mergedValue }, () => {
-      resolve();
-    });
+  const mergedValue = { ...getInitialDefaultValue(), ...value }; // TODO change to a deepJSON merge.
+  chrome.storage.sync.set({ defaultValue: mergedValue }, () => {
+    resolve();
   });
+});
 
 export const loadDefaultValueFromStorage = (): Promise<GenericBoatInformation> => new Promise((resolve) => {
   chrome.storage.sync.get(['defaultValue'], (result) => {

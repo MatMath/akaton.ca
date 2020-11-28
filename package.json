@@ -8,7 +8,7 @@
     "build": "webpack --config webpack/webpack.prod.js",
     "clean": "rimraf dist",
     "test": "jest",
-    "lint": "eslint . --ext .json,.js,.jsx,.ts,.tsx --fix"
+    "lint": "eslint . --ext .js,.jsx,.ts,.tsx --fix"
   },
   "repository": {
     "type": "git",
