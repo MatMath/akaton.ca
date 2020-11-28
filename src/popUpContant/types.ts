@@ -26,7 +26,7 @@ export interface BoatFeature {
 }
 
 interface Sail extends BoatFeature {
-    type: SailType,
+  type: SailType,
 }
 
 interface EngineDetails extends BoatFeature {

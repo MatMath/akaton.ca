@@ -112,7 +112,7 @@ export const saveDefaultValueToStorage = (value: GenericBoatInformation): Promis
   new Promise((resolve) => {
     const mergedValue = { ...getInitialDefaultValue(), ...value }; // TODO change to a deepJSON merge.
     chrome.storage.sync.set({ defaultValue: mergedValue }, () => {
-      resolve()
+      resolve();
     });
   });
 
