@@ -11,5 +11,17 @@
     "typeRoots": [
       "node_modules/@types"
     ]
+  },
+  "include": [
+    ".eslintrc.js",
+    "jest.config.js",
+    "package.json",
+    "src",
+    "test",
+    "test/.eslintrc.js",
+    "webpack"
+  ],
+  "parserOptions": {
+    "extraFileExtensions": ".json"
   }
 }

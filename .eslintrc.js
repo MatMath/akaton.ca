@@ -5,13 +5,12 @@ module.exports = {
     webextensions: true,
   },
   extends: [
-    'airbnb-base',
+    'airbnb-typescript',
     'plugin:json/recommended',
   ],
   parser: '@typescript-eslint/parser',
   parserOptions: {
-    ecmaVersion: 12,
-    sourceType: 'module',
+    project: './tsconfig.json',
   },
   plugins: [
     '@typescript-eslint',

@@ -9,7 +9,7 @@
     "start": "webpack-dev-server  --config webpack/webpack.dev.js --mode development --inline --hot --open",
     "clean": "rimraf dist",
     "test": "jest",
-    "lint": "eslint . --ext .json,.js,.ts --fix"
+    "lint": "eslint . --ext .js,.jsx,.ts,.tsx --fix"
   },
   "repository": {
     "type": "git",
@@ -34,8 +34,12 @@
     "css-loader": "^5.0.1",
     "eslint": "^7.14.0",
     "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-config-airbnb-typescript": "^12.0.0",
     "eslint-plugin-import": "^2.22.1",
     "eslint-plugin-json": "^2.1.2",
+    "eslint-plugin-jsx-a11y": "^6.4.1",
+    "eslint-plugin-react": "^7.21.5",
+    "eslint-plugin-react-hooks": "^4.2.0",
     "file-loader": "^6.2.0",
     "html-webpack-plugin": "^4.5.0",
     "jest": "^25.1.0",
