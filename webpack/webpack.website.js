@@ -10,7 +10,7 @@ module.exports = {
   resolve: {
     extensions: [".js", ".ts", ".tsx"]
   },
-  entry: ["@babel/polyfill", "./index.ts"],
+  entry: ["./index.tsx"],
   output: {
     path: path.join(basePath, "dist"),
     filename: "bundle.js"
@@ -28,11 +28,7 @@ module.exports = {
       {
         test: /\.(ts|tsx)$/,
         exclude: /node_modules/,
-        loader: "awesome-typescript-loader",
-        options: {
-          useBabel: true,
-          babelCore: "@babel/core" // needed for Babel v7
-        }
+        loader: "awesome-typescript-loader"
       },
       {
         test: /\.css$/,

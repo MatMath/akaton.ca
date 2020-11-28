@@ -22,10 +22,6 @@
     "react-dom": "^17.0.1"
   },
   "devDependencies": {
-    "@babel/cli": "^7.12.8",
-    "@babel/core": "^7.12.9",
-    "@babel/polyfill": "^7.12.1",
-    "@babel/preset-env": "^7.12.7",
     "@types/chrome": "0.0.100",
     "@types/jest": "^25.1.4",
     "@types/jquery": "^3.3.33",
