@@ -1,12 +1,9 @@
 import * as React from "react";
+const { popupClass } = require('./styles.css')
 // import './popup';
 
-console.log('POPUP container sc ript loading');
-
 export const PopupContainer = () => {
-  console.log('INSIDE RENDER');
-  
-  return <div>
+  return <div className={popupClass}>
     <ul>
       <li>Current URL: <span id="url"></span></li>
       <li>Current Time: <span id="time"></span></li>
