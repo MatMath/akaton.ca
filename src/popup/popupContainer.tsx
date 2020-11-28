@@ -1,14 +1,21 @@
-import * as React from "react";
-const { popupClass } = require('./styles.css')
+import * as React from 'react';
+
+const { popupClass } = require('./styles.css');
 // import './popup';
 
-export const PopupContainer = () => {
-  return <div className={popupClass}>
+export const PopupContainer = () => (
+  <div className={popupClass}>
     <ul>
-      <li>Current URL: <span id="url"></span></li>
-      <li>Current Time: <span id="time"></span></li>
+      <li>
+        Current URL:
+        <span id="url" />
+      </li>
+      <li>
+        Current Time:
+        <span id="time" />
+      </li>
     </ul>
-    <button id="countUp">Count up</button>
-    <button id="changeBackground">Change background</button>
-  </div>;
-};
+    <button type="button" id="countUp">Count up</button>
+    <button type="button" id="changeBackground">Change background</button>
+  </div>
+);

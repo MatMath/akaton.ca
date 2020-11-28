@@ -25,5 +25,6 @@ module.exports = {
       optionalDependencies: true,
       peerDependencies: true,
     }],
+    'import/prefer-default-export': 'off',
   },
 };

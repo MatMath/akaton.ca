@@ -1,6 +1,6 @@
 const webpack = require('webpack');
-var HtmlWebpackPlugin = require("html-webpack-plugin");
-var MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const path = require('path');
 const CopyPlugin = require('copy-webpack-plugin');
 
@@ -18,11 +18,11 @@ module.exports = {
     filename: '[name].js',
   },
   devServer: {
-    contentBase: "./dist", // Content base
+    contentBase: './dist', // Content base
     inline: true, // Enable watch and live reload
-    host: "localhost",
+    host: 'localhost',
     port: 8080,
-    stats: "errors-only"
+    stats: 'errors-only',
   },
   module: {
     rules: [
@@ -33,8 +33,8 @@ module.exports = {
       },
       {
         test: /\.css$/,
-        use: [MiniCssExtractPlugin.loader, "css-loader"]
-      }
+        use: [MiniCssExtractPlugin.loader, 'css-loader'],
+      },
     ],
   },
   resolve: {
@@ -48,13 +48,13 @@ module.exports = {
       options: {},
     }),
     new HtmlWebpackPlugin({
-      filename: "../popup.html", //Name of file in ./dist/
-      template: "./src/popup/index.html", //Name of template in ./src
-      chunks: ['popup']
+      filename: '../popup.html', // Name of file in ./dist/
+      template: './src/popup/index.html', // Name of template in ./src
+      chunks: ['popup'],
     }),
     new MiniCssExtractPlugin({
-      filename: "[name].css",
-      chunkFilename: "[id].css"
-    })
+      filename: '[name].css',
+      chunkFilename: '[id].css',
+    }),
   ],
 };
