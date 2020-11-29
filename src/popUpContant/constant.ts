@@ -20,31 +20,29 @@ export const getInitialDefaultValue = (): GenericBoatInformation => ({
     replacementCost: 20000,
     comments: [],
   },
-  electronics: {
-    autopilot: {
-      name: '',
-      value: '',
-      quality: Quality.NA,
-      dealBreaker: false,
-      replacementCost: 5000,
-      comments: [],
-    },
-    battery: {
-      name: '',
-      value: '',
-      quality: Quality.NA,
-      dealBreaker: false,
-      replacementCost: 5000,
-      comments: [],
-    },
-    solarPower: {
-      name: '',
-      value: '',
-      quality: Quality.NA,
-      dealBreaker: false,
-      replacementCost: 5000,
-      comments: [],
-    },
+  autopilot: {
+    name: '',
+    value: '',
+    quality: Quality.NA,
+    dealBreaker: false,
+    replacementCost: 5000,
+    comments: [],
+  },
+  battery: {
+    name: '',
+    value: '',
+    quality: Quality.NA,
+    dealBreaker: false,
+    replacementCost: 5000,
+    comments: [],
+  },
+  solarPower: {
+    name: '',
+    value: '',
+    quality: Quality.NA,
+    dealBreaker: false,
+    replacementCost: 5000,
+    comments: [],
   },
   sails: {
     mainsail: {
@@ -96,25 +94,21 @@ export const getInitialDefaultValue = (): GenericBoatInformation => ({
     waterTank: 0,
     fuelTank: 0,
   },
-  comfort: {
-    bimini: {
-      name: '',
-      value: '',
-      quality: Quality.NA,
-      dealBreaker: false,
-      replacementCost: 5000,
-      comments: [],
-    },
+  bimini: {
+    name: '',
+    value: '',
+    quality: Quality.NA,
+    dealBreaker: false,
+    replacementCost: 5000,
+    comments: [],
   },
-  extra: {
-    digny: {
-      name: '',
-      value: '',
-      quality: Quality.NA,
-      dealBreaker: true,
-      replacementCost: 10000,
-      comments: [],
-    },
+  digny: {
+    name: '',
+    value: '',
+    quality: Quality.NA,
+    dealBreaker: true,
+    replacementCost: 10000,
+    comments: [],
   },
 });
 

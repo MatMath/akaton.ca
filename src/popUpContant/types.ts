@@ -41,12 +41,6 @@ export interface BoatDimension {
   draft: number
 }
 
-export interface BoatElectronic {
-  autopilot: BoatFeature
-  battery: BoatFeature,
-  solarPower: BoatFeature
-}
-
 export interface BoatSails {
   mainsail: Sail,
   genoa: Sail,
@@ -67,13 +61,11 @@ export interface GenericBoatInformation {
   url: string,
   dimension: BoatDimension,
   engine: EngineDetails,
-  electronics: BoatElectronic,
+  autopilot: BoatFeature,
+  battery: BoatFeature,
+  solarPower: BoatFeature,
   sails: BoatSails,
   insideEquipment: BoatInsideEquipment,
-  comfort: {
-    bimini: BoatFeature
-  }
-  extra: {
-    digny: BoatFeature
-  }
+  bimini: BoatFeature,
+  digny: BoatFeature,
 }

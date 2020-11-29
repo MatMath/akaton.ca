@@ -4,7 +4,7 @@ import styles from './styles.module.css'
 
 interface Props {
   item: BoatFeature,
-  onUpdate: Function,
+  onUpdate?: Function,
 }
 
 enum ItemKeys {
@@ -17,7 +17,7 @@ enum ItemKeys {
 
 export const StringBoatFeatureEdit = ({item, onUpdate}:Props) => {
   const [localItem, setLocalItem] = React.useState(item)
-  
+
   const updateItem = (key:ItemKeys, value:any) => {
     const tmpItem = {...localItem, [key]: value}
     setLocalItem(tmpItem)
@@ -35,4 +35,17 @@ export const StringBoatFeatureEdit = ({item, onUpdate}:Props) => {
     </div>
   )
 }
-{/* <input value={item.dealBreaker} type="checkbox" /> */}
+
+export const StringBoatFeature = ({item}:Props) => {
+  return (
+    <div>
+      <div className={styles.dealBreaker}>name: {item.name}</div>
+      value: {item.value}
+      Quality: {item.quality}
+      Cost: {item.replacementCost}
+      <div>
+        {item.comments}
+      </div>
+    </div>
+  )
+}
