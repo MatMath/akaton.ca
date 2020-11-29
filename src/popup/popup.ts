@@ -1,8 +1,6 @@
-import PouchDB from 'pouchdb';
 // import { extractPageContent } from './exractPageContent';
 
 const count = 0;
-const dbname = 'cesine-akaton';
 
 (function loadPopup() {
   const queryInfo = {
@@ -10,13 +8,8 @@ const dbname = 'cesine-akaton';
     currentWindow: true,
   };
 
-  // this expects you have logged into the db in another window and have an open session
-  const db = new PouchDB(`https://corpus.fielddb.org/${dbname}`);
-  db.info().then((info) => {
-    console.log('DB info:', info);
-  });
-
   chrome.tabs.query(queryInfo, ([{ id, url }]) => {
+    console.log('url is ', url);
     chrome.tabs.sendMessage(id, {
       // TO run a querry/function to the Tab ID
       // Call extract & parse info
