@@ -18,13 +18,36 @@ function extract({
 
 chrome.runtime.onMessage.addListener((msg, sender, sendResponse) => {
   console.log('im in the listener again 2');
-  // console.log(document)
-  const text = document.body.innerText;
-  const result = extract({
-    keyword: /engine..............+[\n]/gi,
-    text,
-  });
-  sendResponse(`RESP: ${JSON.stringify(result)}`);
+  const contentMain = document.body; // document.getElementsByClassName('content_main')[0] as HTMLElement;
+  const text = contentMain.innerText;
+  console.log('text', text);
+  const boatFeatures = [{
+    key: 'engine',
+    matcher: /engine..+\n..+\n/gi,
+  }, {
+    key: 'hull',
+    matcher: /hull..+\n..+\n/gi,
+  }, {
+    key: 'length',
+    matcher: /length..+\n..+\n/gi,
+  }, {
+    key: 'location',
+    matcher: /located in..+\n..+\n/gi,
+  }, {
+    key: 'price',
+    matcher: /price..+\n..+\n/gi,
+  }];
+  const result = {
+    fields: boatFeatures.map((feature) => ({
+      key: feature.key,
+      descriptions: extract({
+        keyword: feature.matcher,
+        text,
+      }),
+    })),
+  };
+  console.log('result', result);
+  sendResponse(JSON.stringify(result));
   // sendResponse(text);
   // sendResponse('results ' + result? result.join('\n') : 'nothing');
 });
