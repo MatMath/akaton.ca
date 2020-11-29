@@ -19,10 +19,10 @@ export const BoatDimensionSection = ({ dimension, onUpdate }: Props) => {
   const [length, setLength] = React.useState(dimension.length)
 
   const handleValueChange = (target: TargetOption, value: string) => {
-    const newDimension = {...dimension, [target]: parseFloat(value)}
+    const newDimension = { ...dimension, [target]: parseFloat(value) }
     switch (target) {
       case TargetOption.beam:
-        setBeam(parseFloat(value))    
+        setBeam(parseFloat(value))
         break;
       case TargetOption.draft:
         setDraft(parseFloat(value))
@@ -37,23 +37,29 @@ export const BoatDimensionSection = ({ dimension, onUpdate }: Props) => {
   }
   return (
     <div className={styles.mainSection}>
-      <div className={styles.itemDescription}>Beam</div>
-      <input
-        type="number"
-        value={beam}
-        onChange={(e) => handleValueChange(TargetOption.beam, e.target.value)}
-      />
-      <div className={styles.itemDescription}>Draft</div>
-      <input
-        type="number"
-        value={draft}
-        onChange={(e) => handleValueChange(TargetOption.draft, e.target.value)}
-      />
-      <div className={styles.itemDescription}>Length</div>
-      <input
-        type="number"
-        value={length}
-        onChange={(e) => handleValueChange(TargetOption.length, e.target.value)}
-      />
+      <div className={styles.itemRow}>
+        <div>Beam</div>
+        <input
+          type="number"
+          value={beam}
+          onChange={(e) => handleValueChange(TargetOption.beam, e.target.value)}
+        />
+      </div>
+      <div className={styles.itemRow}>
+        <div>Draft</div>
+        <input
+          type="number"
+          value={draft}
+          onChange={(e) => handleValueChange(TargetOption.draft, e.target.value)}
+        />
+      </div>
+      <div className={styles.itemRow}>
+        <div>Length</div>
+        <input
+          type="number"
+          value={length}
+          onChange={(e) => handleValueChange(TargetOption.length, e.target.value)}
+        />
+      </div>
     </div>)
 };

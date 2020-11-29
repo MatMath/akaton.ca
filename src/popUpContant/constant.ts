@@ -11,9 +11,10 @@ export const getInitialDefaultValue = (): GenericBoatInformation => ({
     draft: 6,
   },
   engine: {
-    name: '',
+    name: 'Volvo',
     power: 55,
     nbrHours: 2340,
+    section: 'Engine',
     value: '',
     quality: Quality.NA,
     dealBreaker: false,
@@ -21,31 +22,35 @@ export const getInitialDefaultValue = (): GenericBoatInformation => ({
     comments: [],
   },
   autopilot: {
-    name: '',
+    section: 'Autopilot',
+    name: 'Free-wheel',
     value: '',
-    quality: Quality.NA,
+    quality: Quality.GOOD,
     dealBreaker: false,
     replacementCost: 5000,
     comments: [],
   },
   battery: {
-    name: '',
-    value: '',
-    quality: Quality.NA,
+    section: 'Battery',
+    name: 'LI-ON',
+    value: '55KWH',
+    quality: Quality.REPLACE_LATER,
     dealBreaker: false,
     replacementCost: 5000,
     comments: [],
   },
   solarPower: {
-    name: '',
-    value: '',
-    quality: Quality.NA,
+    section: 'Solar',
+    name: 'HARD TOP',
+    value: '55WH',
+    quality: Quality.REPLACE_NOW,
     dealBreaker: false,
     replacementCost: 5000,
     comments: [],
   },
   sails: {
     mainsail: {
+      section: 'MainSail',
       name: '',
       type: SailType.NA,
       value: '',
@@ -55,6 +60,7 @@ export const getInitialDefaultValue = (): GenericBoatInformation => ({
       comments: [],
     },
     genoa: {
+      section: 'Genoa',
       name: '',
       type: SailType.NA,
       value: '',
@@ -64,6 +70,7 @@ export const getInitialDefaultValue = (): GenericBoatInformation => ({
       comments: [],
     },
     jib: {
+      section: 'Jib',
       name: '',
       type: SailType.NA,
       value: '',
@@ -73,6 +80,7 @@ export const getInitialDefaultValue = (): GenericBoatInformation => ({
       comments: [],
     },
     spinaker: {
+      section: 'Spinaker',
       name: '',
       type: SailType.NA,
       value: '',
@@ -82,6 +90,7 @@ export const getInitialDefaultValue = (): GenericBoatInformation => ({
       comments: [],
     },
     rigging: {
+      section: 'Rigging',
       name: '',
       value: '',
       quality: Quality.NA,
@@ -95,6 +104,7 @@ export const getInitialDefaultValue = (): GenericBoatInformation => ({
     fuelTank: 0,
   },
   bimini: {
+    section: 'Bimini',
     name: '',
     value: '',
     quality: Quality.NA,
@@ -103,6 +113,7 @@ export const getInitialDefaultValue = (): GenericBoatInformation => ({
     comments: [],
   },
   digny: {
+    section: 'Digny',
     name: '',
     value: '',
     quality: Quality.NA,

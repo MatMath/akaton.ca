@@ -31,7 +31,7 @@ export const PopupContainer = () => {
   const [completeData, setCompleteData] = React.useState<GenericBoatInformation | null>();
   const [boatDimension, setBoatDimension] = React.useState<BoatDimension | null>();
   const [engineDetails, setEngineDetails] = React.useState<EngineDetails | null>();
-  
+
   // Electronic
   const [autopilot, setAutopilot] = React.useState<BoatFeature | null>();
   const [battery, setBattery] = React.useState<BoatFeature | null>();
@@ -40,9 +40,9 @@ export const PopupContainer = () => {
   const [boatSails, setBoatSails] = React.useState<BoatSails | null>();
 
   // comfort
-  const [ bimini, setBimini ] = React.useState<BoatFeature | null>();
+  const [bimini, setBimini] = React.useState<BoatFeature | null>();
   // extra
-  const [ digny, setDigny ] = React.useState<BoatFeature | null>();
+  const [digny, setDigny] = React.useState<BoatFeature | null>();
 
   const [boatInsideEquipment, setBoatInsideEquipment] = React.useState<BoatInsideEquipment | null>();
   const [dataRetreived, setDataRetreived] = React.useState(false);
@@ -67,7 +67,7 @@ export const PopupContainer = () => {
     setBattery(battery)
     setSolarPower(solarPower)
     setBoatSails(sails);
-    
+
     setBimini(bimini)
     setDigny(digny)
 
@@ -81,18 +81,30 @@ export const PopupContainer = () => {
     setBoatDimension(value)
   }
 
-  const tmpUpdatePage = (ActiveSection: Section, value: BoatFeature) => {
-    console.log('UPDATE ', ActiveSection, value);
+  const UpdatePage = (ActiveSection: Section, value: BoatFeature) => {
+    console.log('UpDATE DATA:', ActiveSection, value);
     setEditSection(Section.NA);
+    switch (ActiveSection) {
+      case Section.EDIT_AUTOPILOT:
+        return setAutopilot(value)
+      case Section.EDIT_BATTERIY:
+        return setBattery(value)
+      case Section.EDIT_BIMINI:
+        return setBimini(value)
+      case Section.EDIT_DIGNY:
+        return setDigny(value)
+      default:
+        break;
+    }
   }
-  
-  const showSection = (item:BoatFeature, ActiveSection: Section) => {
-    if(ActiveSection === editSection) {
-      return (<StringBoatFeatureEdit item={item} onUpdate={(value) => tmpUpdatePage(ActiveSection, value)} />)
+
+  const showSection = (item: BoatFeature, ActiveSection: Section) => {
+    if (ActiveSection === editSection) {
+      return (<StringBoatFeatureEdit item={item} onUpdate={(value) => UpdatePage(ActiveSection, value)} />)
     }
     return (
       <div onClick={() => setEditSection(ActiveSection)}>
-        <StringBoatFeature item={item}/>
+        <StringBoatFeature item={item} />
       </div>
     )
   }
@@ -101,14 +113,12 @@ export const PopupContainer = () => {
     if (dataRetreived) {
       return (
         <>
-          <div>
-            <h1>
-              BOAT:
-              {completeData.name}
-            </h1>
+          <div className={styles.headerRow}>
+            <h1> Boat: {completeData.name} </h1>
+            <button type="button" id="discard">Discard</button>
+            <button type="button" id="saveData">Save Data</button>
           </div>
           <div className={styles.tableContainer}>
-            <hr />
             <BoatDimensionSection
               dimension={boatDimension}
               onUpdate={boatDimensionUpdate}
@@ -138,15 +148,11 @@ export const PopupContainer = () => {
             />
 
             <hr />
-            comfort:
             {showSection(bimini, Section.EDIT_BIMINI)}
 
             <hr />
-            extra
             {showSection(digny, Section.EDIT_DIGNY)}
           </div>
-          <button type="button" id="discard">Discard</button>
-          <button type="button" id="saveData">Save Data</button>
         </>
       );
     }

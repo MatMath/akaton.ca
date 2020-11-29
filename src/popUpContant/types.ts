@@ -18,6 +18,7 @@ export interface CommentsStructure {
 }
 
 export interface BoatFeature {
+  section: string,
   name: string,
   value: string | number
   quality: Quality,
