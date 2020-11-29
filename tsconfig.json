@@ -17,10 +17,11 @@
     ".eslintrc.js",
     "jest.config.js",
     "package.json",
-    "src",
+    "src/**/*",
     "test",
     "test/.eslintrc.js",
-    "webpack"
+    "webpack",
+    "typings-custom/**/*"
   ],
   "parserOptions": {
     "extraFileExtensions": ".json"
