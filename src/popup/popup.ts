@@ -24,9 +24,6 @@ const dbname = 'cesine-akaton';
     };
     console.log('Doc:', doc);
 
-    document.getElementById('url').innerText = url;
-    document.getElementById('time').innerText = new Date().toLocaleString();
-
     chrome.tabs.sendMessage(id, {
       // TO run a querry/function to the Tab ID
       // Call extract & parse info
