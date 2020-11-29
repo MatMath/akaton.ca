@@ -1,6 +1,5 @@
 import * as React from 'react';
 
-const { popupClass } = require('./styles.css');
 import './popup';
 import styles from './styles.module.css';
 import {
