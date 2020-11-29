@@ -50,7 +50,7 @@ const dbname = 'cesine-akaton';
   document.getElementById('changeBackground').onclick = () => {
     // chrome.tabs.executeScript({code: 'console.log("running this")' ,file: './extractPageContent'})
     chrome.tabs.query({ active: true, currentWindow: true }, (tabs) => {
-      chrome.tabs.sendMessage(tab[0].id, {
+      chrome.tabs.sendMessage(tabs[0].id, {
         // TO run a querry/function to the Tab ID
         // Call extract & parse info
         color: '#555555',
