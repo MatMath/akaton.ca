@@ -2,6 +2,7 @@ const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const path = require('path');
 const CopyPlugin = require('copy-webpack-plugin');
+const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
 const srcDir = '../src/';
 
@@ -41,6 +42,7 @@ module.exports = {
   },
   plugins: [
     // exclude locale files in moment
+    new CleanWebpackPlugin(),
     new webpack.IgnorePlugin(/^\.\/locale$/, /moment$/),
     new CopyPlugin({
       patterns: [{ from: '.', to: '../', context: 'public' }],
