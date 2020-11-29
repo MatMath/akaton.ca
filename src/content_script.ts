@@ -1,9 +1,37 @@
+import PouchDB from 'pouchdb';
+
 function extract({
   keyword,
   text,
 }) {
   return text.match(keyword);
 }
+const dbname = 'cesine-akaton';
+
+// this expects you have logged into the db in another window and have an open session
+const db = new PouchDB(`https://corpus.fielddb.org/${dbname}`, {
+  // fetch: function (url, opts) {
+  //   opts.headers['Cookie'] = 'AuthSession=abc-';
+  //   console.log('fetch opts', opts);
+  //   return fetch(url, {
+  //     method: 'GET',
+  //     mode: 'cors',
+  //     cache: 'no-cache',
+  //     credentials: 'include',
+  //     headers: {
+  //       Accept: 'application/json',
+  //       'Content-Type': 'application/json',
+  //     },
+  //     redirect: 'error', // manual, *follow, error
+  //     referrerPolicy: 'no-referrer-when-downgrade',
+  //   });
+  // },
+});
+db.info()
+  .then((info) => {
+    console.log('DB info:', info);
+  })
+  .catch(console.log);
 
 // chrome.runtime.onMessage.addListener(function(msg, sender, sendResponse) {
 //     if (msg.color) {
@@ -20,7 +48,7 @@ chrome.runtime.onMessage.addListener((msg, sender, sendResponse) => {
   console.log('im in the listener again 2');
   const contentMain = document.body; // document.getElementsByClassName('content_main')[0] as HTMLElement;
   const text = contentMain.innerText;
-  console.log('text', text);
+  // console.log('text', text);
   const boatFeatures = [{
     key: 'engine',
     matcher: /engine..+\n..+\n/gi,
@@ -37,17 +65,24 @@ chrome.runtime.onMessage.addListener((msg, sender, sendResponse) => {
     key: 'price',
     matcher: /price..+\n..+\n/gi,
   }];
-  const result = {
+  const doc = {
+    _id: 'test_' + window.location.pathname.substring(window.location.pathname.lastIndexOf('/') + 1)
+      .replace(/[^a-z0-9-]/i, '_') // force aphanumeric
+      .replace(/\..+/, ''),
+    title: document.title,
     fields: boatFeatures.map((feature) => ({
       key: feature.key,
       descriptions: extract({
         keyword: feature.matcher,
         text,
       }),
+      text,
     })),
   };
-  console.log('result', result);
-  sendResponse(JSON.stringify(result));
+  console.log('doc', doc);
+  db.put(doc)
+    .catch(console.log);
+  sendResponse(JSON.stringify(doc));
   // sendResponse(text);
   // sendResponse('results ' + result? result.join('\n') : 'nothing');
 });

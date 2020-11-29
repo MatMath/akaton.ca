@@ -17,13 +17,6 @@ const dbname = 'cesine-akaton';
   });
 
   chrome.tabs.query(queryInfo, ([{ id, url }]) => {
-    const doc = {
-      _id: url.substring(url.lastIndexOf('/') + 1)
-        .replace(/[^a-z0-9-]/i, '_') // force aphanumeric
-        .replace(/\..+/, ''),
-    };
-    console.log('Doc:', doc);
-
     chrome.tabs.sendMessage(id, {
       // TO run a querry/function to the Tab ID
       // Call extract & parse info
@@ -32,12 +25,6 @@ const dbname = 'cesine-akaton';
     (msg) => {
       // Callbck to update the UI
       console.log('result message:', msg);
-      const extractedData = JSON.parse(msg);
-      const updatedDoc = {
-        ...doc,
-        ...extractedData,
-      };
-      console.log('updatedDoc:', updatedDoc);
     });
   });
 
