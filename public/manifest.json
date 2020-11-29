@@ -28,8 +28,7 @@
         "<all_urls>"
       ],
       "js": [
-        "js/content_script.js",
-        "js/popup.js"
+        "js/content_script.js"
       ]
     }
   ],

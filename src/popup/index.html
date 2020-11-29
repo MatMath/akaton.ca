@@ -2,25 +2,10 @@
 <html>
   <head>
     <meta charset="UTF-8">
-    <meta http-equiv="Content-Security-Policy"
-      content="default-src 'self' 'unsafe-eval';
-      style-src 'self' 'unsafe-inline';
-    ">
     <title>Compare boat JS</title>
   </head>
   <body>
     <div id="root"></div>
-    <script src="https://cdn.jsdelivr.net/npm/pouchdb@7.2.1/dist/pouchdb.min.js"></script>
-
-    <script unsafe-inline>
-      const dbname = 'cesine-akaton';
-      console.log('dbname', dbname);
-      const db = new PouchDB(`https://corpus.fielddb.org/cesine-akaton`);
-      db.info()
-      .then(console.log);
-      window.db = db;
-      console.log('db', db);
-    </script>
   </body>
 </html>
 
