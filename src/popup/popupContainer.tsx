@@ -1,10 +1,9 @@
 import * as React from 'react';
 
-const { popupClass } = require('./styles.css');
-// import './popup';
+import styles from './styles.module.css';
 
 export const PopupContainer = () => (
-  <div className={popupClass}>
+  <div className={styles.mainContainer}>
     <ul>
       <li>
         Current URL:
