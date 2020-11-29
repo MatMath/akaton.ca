@@ -9,6 +9,7 @@ import {
   BoatElectronic,
   BoatSails,
   BoatInsideEquipment,
+  BoatFeature,
 } from '../popUpContant/types';
 import { getInitialDefaultValue } from '../popUpContant/constant';
 
@@ -17,6 +18,7 @@ import { BoatElectronicSection } from './boatElectronic';
 import { EngineDetailsSection } from './engineDetails';
 import { BoatSailsSection } from './boatSails';
 import { BoatInsideEquipmentSection } from './boatInsideEquipement';
+import { StringBoatFeatureEdit } from './stringBoatFeatureEdit';
 
 export const PopupContainer = () => {
   const [completeData, setCompleteData] = React.useState<GenericBoatInformation | null>();
@@ -41,6 +43,15 @@ export const PopupContainer = () => {
     setDataRetreived(true);
   };
 
+  const boatDimensionUpdate = (value) => {
+    console.log('PARENT RECEIVED:', value);
+    setBoatDimension(value)
+  }
+
+  const tmpUpdatePage = (value: BoatFeature) => {
+    console.log('BOAT feature', value);
+  }
+
   const showData = () => {
     if (dataRetreived) {
       return (
@@ -55,7 +66,7 @@ export const PopupContainer = () => {
             <hr />
             <BoatDimensionSection
               dimension={boatDimension}
-              onUpdate={setBoatDimension}
+              onUpdate={boatDimensionUpdate}
             />
 
             <hr />
@@ -69,6 +80,7 @@ export const PopupContainer = () => {
               electronics={boatElectronic}
               onUpdate={setBoatElectronic}
             />
+            <StringBoatFeatureEdit item={boatElectronic.autopilot} onUpdate={tmpUpdatePage} />
 
             <hr />
             <BoatSailsSection

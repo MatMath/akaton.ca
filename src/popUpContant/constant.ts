@@ -3,16 +3,17 @@ import { GenericBoatInformation, Quality, SailType } from './types';
 export const getInitialDefaultValue = (): GenericBoatInformation => ({
   id: '',
   version: 1,
-  name: '',
+  name: 'Beneteau',
   url: '',
   dimension: {
-    length: null,
-    beam: null,
-    draft: null,
+    length: 43,
+    beam: 13,
+    draft: 6,
   },
   engine: {
-    power: null,
-    nbrHours: null,
+    name: '',
+    power: 55,
+    nbrHours: 2340,
     value: '',
     quality: Quality.NA,
     dealBreaker: false,
@@ -21,6 +22,7 @@ export const getInitialDefaultValue = (): GenericBoatInformation => ({
   },
   electronics: {
     autopilot: {
+      name: '',
       value: '',
       quality: Quality.NA,
       dealBreaker: false,
@@ -28,6 +30,7 @@ export const getInitialDefaultValue = (): GenericBoatInformation => ({
       comments: [],
     },
     battery: {
+      name: '',
       value: '',
       quality: Quality.NA,
       dealBreaker: false,
@@ -35,6 +38,7 @@ export const getInitialDefaultValue = (): GenericBoatInformation => ({
       comments: [],
     },
     solarPower: {
+      name: '',
       value: '',
       quality: Quality.NA,
       dealBreaker: false,
@@ -44,6 +48,7 @@ export const getInitialDefaultValue = (): GenericBoatInformation => ({
   },
   sails: {
     mainsail: {
+      name: '',
       type: SailType.NA,
       value: '',
       quality: Quality.NA,
@@ -52,6 +57,7 @@ export const getInitialDefaultValue = (): GenericBoatInformation => ({
       comments: [],
     },
     genoa: {
+      name: '',
       type: SailType.NA,
       value: '',
       quality: Quality.NA,
@@ -60,6 +66,7 @@ export const getInitialDefaultValue = (): GenericBoatInformation => ({
       comments: [],
     },
     jib: {
+      name: '',
       type: SailType.NA,
       value: '',
       quality: Quality.NA,
@@ -68,6 +75,7 @@ export const getInitialDefaultValue = (): GenericBoatInformation => ({
       comments: [],
     },
     spinaker: {
+      name: '',
       type: SailType.NA,
       value: '',
       quality: Quality.NA,
@@ -76,6 +84,7 @@ export const getInitialDefaultValue = (): GenericBoatInformation => ({
       comments: [],
     },
     rigging: {
+      name: '',
       value: '',
       quality: Quality.NA,
       dealBreaker: true,
@@ -89,6 +98,7 @@ export const getInitialDefaultValue = (): GenericBoatInformation => ({
   },
   comfort: {
     bimini: {
+      name: '',
       value: '',
       quality: Quality.NA,
       dealBreaker: false,
@@ -98,6 +108,7 @@ export const getInitialDefaultValue = (): GenericBoatInformation => ({
   },
   extra: {
     digny: {
+      name: '',
       value: '',
       quality: Quality.NA,
       dealBreaker: true,
