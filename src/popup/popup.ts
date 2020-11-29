@@ -1,6 +1,8 @@
+import PouchDB from 'pouchdb';
 // import { extractPageContent } from './exractPageContent';
 
 let count = 0;
+const dbname = 'cesine-akaton';
 
 (function loadPopup() {
   const queryInfo = {
@@ -8,12 +10,19 @@ let count = 0;
     currentWindow: true,
   };
 
+  // this expects you have logged into the db in another window and have an open session
+  const db = new PouchDB(`https://corpus.fielddb.org/${dbname}`);
+  db.info().then((info) => {
+    console.log('DB info:', info);
+  });
+
   chrome.tabs.query(queryInfo, (tabs) => {
     document.getElementById('url').innerText = tabs[0].url;
     document.getElementById('time').innerText = new Date().toLocaleString();
   });
 
   chrome.browserAction.setBadgeText({ text: count.toString() });
+  /*
   document.getElementById('countUp').onclick = () => {
     chrome.browserAction.setBadgeText({ text: (count += 1).toString() });
   };
@@ -32,4 +41,5 @@ let count = 0;
       });
     });
   };
+  */
 }());
