@@ -1,4 +1,20 @@
 .mainContainer {
   min-width: 700px;
-  background-color:blue;
+  font-size: 16px;
 } 
+
+.tableContainer {
+  min-width: 600px;
+  background-color: aqua
+}
+.tableContainer div {
+  min-height: 20px;
+}
+
+.mainSection {
+  background-color: aquamarine;
+}
+
+.itemDescription {
+  font-weight: bold
+}

@@ -25,13 +25,38 @@ export interface BoatFeature {
   comments: CommentsStructure[] | []
 }
 
-interface Sail extends BoatFeature {
+export interface Sail extends BoatFeature {
   type: SailType,
 }
 
-interface EngineDetails extends BoatFeature {
+export interface EngineDetails extends BoatFeature {
   power: number,
   nbrHours: number,
+}
+
+export interface BoatDimension {
+  length: number,
+  beam: number,
+  draft: number
+}
+
+export interface BoatElectronic {
+  autopilot: BoatFeature
+  battery: BoatFeature,
+  solarPower: BoatFeature
+}
+
+export interface BoatSails {
+  mainsail: Sail,
+  genoa: Sail,
+  jib: Sail,
+  spinaker: Sail,
+  rigging: BoatFeature,
+}
+
+export interface BoatInsideEquipment {
+  waterTank: number,
+  fuelTank: number,
 }
 
 export interface GenericBoatInformation {
@@ -39,28 +64,11 @@ export interface GenericBoatInformation {
   name: string,
   id: string,
   url: string,
-  dimension: {
-    length: number,
-    beam: number,
-    draft: number
-  },
-  engine: EngineDetails
-  electronics: {
-    autopilot: BoatFeature
-    battery: BoatFeature,
-    solarPower: BoatFeature
-  }
-  sails: {
-    mainsail: Sail,
-    genoa: Sail,
-    jib: Sail,
-    spinaker: Sail,
-    rigging: BoatFeature,
-  },
-  insideEquipment: {
-    waterTank: number,
-    fuelTank: number,
-  },
+  dimension: BoatDimension,
+  engine: EngineDetails,
+  electronics: BoatElectronic,
+  sails: BoatSails,
+  insideEquipment: BoatInsideEquipment,
   comfort: {
     bimini: BoatFeature
   }
