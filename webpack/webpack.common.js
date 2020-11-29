@@ -1,6 +1,5 @@
 const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const path = require('path');
 const CopyPlugin = require('copy-webpack-plugin');
 
@@ -33,7 +32,7 @@ module.exports = {
       },
       {
         test: /\.css$/,
-        use: [MiniCssExtractPlugin.loader, 'css-loader'],
+        loader: 'style-loader!css-loader',
       },
     ],
   },
@@ -51,10 +50,6 @@ module.exports = {
       filename: '../popup.html', // Name of file in ./dist/
       template: './src/popup/index.html', // Name of template in ./src
       chunks: ['popup'],
-    }),
-    new MiniCssExtractPlugin({
-      filename: '[name].css',
-      chunkFilename: '[id].css',
     }),
   ],
 };
