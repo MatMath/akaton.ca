@@ -81,7 +81,7 @@ chrome.runtime.onMessage.addListener((msg, sender, sendResponse) => {
           boat._rev = res.rev;
           return boat;
         });
-      })
+    })
     .then((boat) => {
       sendResponse(JSON.stringify(boat));
     })
