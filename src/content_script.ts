@@ -35,20 +35,35 @@ chrome.runtime.onMessage.addListener((msg, sender, sendResponse) => {
   // console.log('text', text);
   const boatFeatures = Object.keys(matchers).map((key) => ({
     key,
-    matcher: matchers[key] || new RegExp(`${key}..+\n..+\n`, 'gi'),
+    matcher: matchers[key] || new RegExp(`${key}.*\n.*\n`, 'gi'),
   }));
   console.log('boatFeatures', boatFeatures);
 
-  const docId = `test_${window.location.pathname.substring(window.location.pathname.lastIndexOf('/') + 1)
+  const pathname = window.location.pathname.replace(/\/$/, '');
+  const docId = `test_${pathname.substring(pathname.lastIndexOf('/') + 1)
     .replace(/[^a-z0-9-]/i, '_') // force aphanumeric
     .replace(/\..+/, '')}`;
 
   db.get(docId)
     .then((doc) => {
-      console.log('doc', doc);
+      console.log('doc akready existed', doc);
+      return doc;
+    })
+    .catch((err) => {
+      console.log('err', err);
+      if (err.status !== 404) {
+        throw err;
+      }
+      return {
+        _id: docId,
+        _rev: undefined,
+      };
+    })
+    .then((doc) => {
       const boat = {
         ...doc,
         title: document.title,
+        url: window.location.href,
         fields: boatFeatures.map((feature) => ({
           key: feature.key,
           descriptions: extract({
@@ -66,7 +81,7 @@ chrome.runtime.onMessage.addListener((msg, sender, sendResponse) => {
           boat._rev = res.rev;
           return boat;
         });
-    })
+      })
     .then((boat) => {
       sendResponse(JSON.stringify(boat));
     })
