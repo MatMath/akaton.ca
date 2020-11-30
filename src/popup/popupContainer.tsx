@@ -105,7 +105,8 @@ export const PopupContainer = () => {
       return (<StringBoatFeatureEdit item={item} onUpdate={(value) => UpdatePage(ActiveSection, value)} />);
     }
     return (
-      <div onClick={() => setEditSection(ActiveSection)}>
+      // eslint-disable-next-line jsx-a11y/interactive-supports-focus
+      <div onClick={() => setEditSection(ActiveSection)} onKeyPress={() => setEditSection(ActiveSection)} role="row">
         <StringBoatFeature item={item} />
       </div>
     );

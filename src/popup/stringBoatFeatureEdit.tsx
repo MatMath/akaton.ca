@@ -5,57 +5,47 @@ import { faBomb, faCheckCircle, faExclamationTriangle } from '@fortawesome/free-
 import { BoatFeature, Quality } from '../popUpContant/types';
 import styles from './styles.module.css';
 
-interface Props {
+interface EditProps {
   item: BoatFeature,
-  onUpdate?: Function,
+  onUpdate: Function,
 }
 
-enum ItemKeys {
-  name = 'name',
-  value = 'value',
-  quality = 'quality',
-  dealBreaker = 'dealBreaker',
-  replacementCost = 'replacementCost',
-}
-
-export const StringBoatFeatureEdit = ({ item, onUpdate }: Props) => {
+export const StringBoatFeatureEdit = ({ item, onUpdate }: EditProps) => {
   const [itemName, setItemName] = React.useState(item.name);
   const [itemValue, setItemValue] = React.useState(item.value);
   const [itemQuality, setItemQuality] = React.useState(item.quality);
   const [itemDealBreaker, setItemDealBreaker] = React.useState(item.dealBreaker);
   const [itemCost, setItemCost] = React.useState(item.replacementCost);
 
-  const rebuildItem = ():BoatFeature => {
-    return {
-      ...item,
-      name: itemName,
-      value: itemValue,
-      quality: itemQuality,
-      dealBreaker: itemDealBreaker,
-      replacementCost: itemCost
-    }
-  }
+  const rebuildItem = ():BoatFeature => ({
+    ...item,
+    name: itemName,
+    value: itemValue,
+    quality: itemQuality,
+    dealBreaker: itemDealBreaker,
+    replacementCost: itemCost,
+  });
 
   const handleItemQuality = (value: string) => {
     // TODO: Must be a better way to do this.
     let newQuality: Quality;
     switch (value) {
       case Quality.GOOD:
-        newQuality = Quality.GOOD
+        newQuality = Quality.GOOD;
         break;
       case Quality.REPLACE_LATER:
-          newQuality = Quality.REPLACE_LATER
-          break;
+        newQuality = Quality.REPLACE_LATER;
+        break;
       case Quality.REPLACE_NOW:
-          newQuality = Quality.REPLACE_NOW
-          break;
+        newQuality = Quality.REPLACE_NOW;
+        break;
       case Quality.NA:
       default:
-          newQuality = Quality.NA
+        newQuality = Quality.NA;
         break;
     }
-    setItemQuality(newQuality)
-  }
+    setItemQuality(newQuality);
+  };
 
   const dealBreakerClass = (itemDealBreaker) ? styles.dealBreaker : null;
 
@@ -72,7 +62,7 @@ export const StringBoatFeatureEdit = ({ item, onUpdate }: Props) => {
       <div>
         value:
         <input
-          id='itemValue'
+          id="itemValue"
           type="string"
           value={itemValue}
           onChange={(e) => setItemValue(e.target.value)}
@@ -91,7 +81,7 @@ export const StringBoatFeatureEdit = ({ item, onUpdate }: Props) => {
       <div>
         Cost:
         <input
-          id='itemCost'
+          id="itemCost"
           type="number"
           value={itemCost}
           onChange={(e) => setItemCost(parseFloat(e.target.value))}
@@ -102,16 +92,16 @@ export const StringBoatFeatureEdit = ({ item, onUpdate }: Props) => {
         {item.comments}
       </div>
       <div>
-        <button type='button' onClick={() => setItemDealBreaker(!itemDealBreaker)}>
-          {itemDealBreaker? 'Important': 'Optional'}
+        <button type="button" onClick={() => setItemDealBreaker(!itemDealBreaker)}>
+          {itemDealBreaker ? 'Important' : 'Optional'}
         </button>
       </div>
-      <button onClick={() => onUpdate(rebuildItem())}>Save</button>
+      <button type="button" onClick={() => onUpdate(rebuildItem())}>Save</button>
     </div>
   );
 };
 
-export const StringBoatFeature = ({ item }: Props) => {
+export const StringBoatFeature = ({ item }: {item:BoatFeature}) => {
   const dealBreakerClass = (item.dealBreaker) ? styles.dealBreaker : null;
   const displayProperIcon = (quality: Quality) => {
     switch (quality) {
@@ -130,19 +120,27 @@ export const StringBoatFeature = ({ item }: Props) => {
     <div className={styles.itemRow}>
       <strong className={dealBreakerClass}>{item.section}</strong>
       <div className={dealBreakerClass}>
-        name: {item.name}
+        name:
+        {' '}
+        {item.name}
       </div>
       {item.value ? (
         <div>
-          value: {item.value}
+          value:
+          {' '}
+          {item.value}
         </div>
       ) : null}
       <div>
-        Quality: {displayProperIcon(item.quality)}
+        Quality:
+        {' '}
+        {displayProperIcon(item.quality)}
       </div>
       {item.replacementCost ? (
         <div>
-          Cost: {item.replacementCost}
+          Cost:
+          {' '}
+          {item.replacementCost}
         </div>
       ) : null}
       {item.comments.length > 0 ? (
