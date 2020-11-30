@@ -1,11 +1,18 @@
 .mainContainer {
   min-width: 700px;
   font-size: 16px;
-} 
+}
+
+.headerRow {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
 
 .tableContainer {
   min-width: 600px;
-  background-color: aqua
+  background-color: aqua;
+  padding-left: 20px;
 }
 .tableContainer div {
   min-height: 20px;
@@ -16,5 +23,20 @@
 }
 
 .itemDescription {
-  font-weight: bold
+  font-weight: bold;
+}
+
+.dealBreaker {
+  background-color: red;
+}
+
+.itemRow {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  min-height: 20px;
+  min-width: 40px;
+}
+.itemRow div {
+  min-width: 50px;
 }
