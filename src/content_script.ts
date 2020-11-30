@@ -1,4 +1,5 @@
 import PouchDB from 'pouchdb';
+import { matchers } from './extact/yachtworld';
 
 function extract({
   keyword,
@@ -32,40 +33,45 @@ chrome.runtime.onMessage.addListener((msg, sender, sendResponse) => {
   const contentMain = document.body; // document.getElementsByClassName('content_main')[0] as HTMLElement;
   const text = contentMain.innerText;
   // console.log('text', text);
-  const boatFeatures = [{
-    key: 'engine',
-    matcher: /engine..+\n..+\n/gi,
-  }, {
-    key: 'hull',
-    matcher: /hull..+\n..+\n/gi,
-  }, {
-    key: 'length',
-    matcher: /length..+\n..+\n/gi,
-  }, {
-    key: 'location',
-    matcher: /located in..+\n..+\n/gi,
-  }, {
-    key: 'price',
-    matcher: /price..+\n..+\n/gi,
-  }];
-  const docId = `test_${window.location.pathname.substring(window.location.pathname.lastIndexOf('/') + 1)
+  const boatFeatures = Object.keys(matchers).map((key) => ({
+    key,
+    matcher: matchers[key] || new RegExp(`${key}.*\n.*\n`, 'gi'),
+  }));
+  console.log('boatFeatures', boatFeatures);
+
+  const pathname = window.location.pathname.replace(/\/$/, '');
+  const docId = `test_${pathname.substring(pathname.lastIndexOf('/') + 1)
     .replace(/[^a-z0-9-]/i, '_') // force aphanumeric
     .replace(/\..+/, '')}`;
 
   db.get(docId)
     .then((doc) => {
-      console.log('doc', doc);
+      console.log('doc akready existed', doc);
+      return doc;
+    })
+    .catch((err) => {
+      console.log('err', err);
+      if (err.status !== 404) {
+        throw err;
+      }
+      return {
+        _id: docId,
+        _rev: undefined,
+      };
+    })
+    .then((doc) => {
       const boat = {
         ...doc,
         title: document.title,
+        url: window.location.href,
         fields: boatFeatures.map((feature) => ({
           key: feature.key,
           descriptions: extract({
             keyword: feature.matcher,
             text,
           }),
-          text,
         })),
+        text,
       };
       console.log('boat', boat);
       return db.put(boat)
