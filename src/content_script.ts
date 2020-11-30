@@ -1,4 +1,5 @@
 import PouchDB from 'pouchdb';
+import { matchers } from './extact/yachtworld';
 
 function extract({
   keyword,
@@ -32,22 +33,12 @@ chrome.runtime.onMessage.addListener((msg, sender, sendResponse) => {
   const contentMain = document.body; // document.getElementsByClassName('content_main')[0] as HTMLElement;
   const text = contentMain.innerText;
   // console.log('text', text);
-  const boatFeatures = [{
-    key: 'engine',
-    matcher: /engine..+\n..+\n/gi,
-  }, {
-    key: 'hull',
-    matcher: /hull..+\n..+\n/gi,
-  }, {
-    key: 'length',
-    matcher: /length..+\n..+\n/gi,
-  }, {
-    key: 'location',
-    matcher: /located in..+\n..+\n/gi,
-  }, {
-    key: 'price',
-    matcher: /price..+\n..+\n/gi,
-  }];
+  const boatFeatures = Object.keys(matchers).map((key) => ({
+    key,
+    matcher: matchers[key] || new RegExp(`${key}..+\n..+\n`, 'gi'),
+  }));
+  console.log('boatFeatures', boatFeatures);
+
   const docId = `test_${window.location.pathname.substring(window.location.pathname.lastIndexOf('/') + 1)
     .replace(/[^a-z0-9-]/i, '_') // force aphanumeric
     .replace(/\..+/, '')}`;
@@ -64,8 +55,8 @@ chrome.runtime.onMessage.addListener((msg, sender, sendResponse) => {
             keyword: feature.matcher,
             text,
           }),
-          text,
         })),
+        text,
       };
       console.log('boat', boat);
       return db.put(boat)
