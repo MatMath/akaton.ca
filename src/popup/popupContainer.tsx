@@ -24,7 +24,7 @@ enum Section {
   EDIT_SOLAR = 'EDIT_SOLAR',
   EDIT_BIMINI = 'EDIT_BIMINI',
   EDIT_DIGNY = 'EDIT_DIGNY',
-  NA = 'NA'
+  NA = 'NA',
 }
 
 export const PopupContainer = () => {
@@ -33,20 +33,19 @@ export const PopupContainer = () => {
   const [engineDetails, setEngineDetails] = React.useState<EngineDetails | null>();
 
   // Electronic
-  const [autopilot, setAutopilot] = React.useState<BoatFeature | null>();
-  const [battery, setBattery] = React.useState<BoatFeature | null>();
-  const [solarPower, setSolarPower] = React.useState<BoatFeature | null>();
+  const [boatAutopilot, setBoatAutopilot] = React.useState<BoatFeature | null>();
+  const [boatBattery, setBoatBattery] = React.useState<BoatFeature | null>();
+  const [boatSolarPower, setBoatSolarPower] = React.useState<BoatFeature | null>();
   // Sails
   const [boatSails, setBoatSails] = React.useState<BoatSails | null>();
-
   // comfort
-  const [bimini, setBimini] = React.useState<BoatFeature | null>();
+  const [boatBimini, setBoatBimini] = React.useState<BoatFeature | null>();
   // extra
-  const [digny, setDigny] = React.useState<BoatFeature | null>();
+  const [boatDigny, setBoatDigny] = React.useState<BoatFeature | null>();
 
   const [boatInsideEquipment, setBoatInsideEquipment] = React.useState<BoatInsideEquipment | null>();
   const [dataRetreived, setDataRetreived] = React.useState(false);
-  const [editSection, setEditSection] = React.useState('')
+  const [editSection, setEditSection] = React.useState('');
 
   const fetchPageInformation = () => {
     const data = getInitialDefaultValue();
@@ -59,17 +58,17 @@ export const PopupContainer = () => {
       sails,
       insideEquipment,
       bimini,
-      digny
+      digny,
     } = data;
     setBoatDimension(dimension);
     setEngineDetails(engine);
-    setAutopilot(autopilot)
-    setBattery(battery)
-    setSolarPower(solarPower)
+    setBoatAutopilot(autopilot);
+    setBoatBattery(battery);
+    setBoatSolarPower(solarPower);
     setBoatSails(sails);
 
-    setBimini(bimini)
-    setDigny(digny)
+    setBoatBimini(bimini);
+    setBoatDigny(digny);
 
     setBoatInsideEquipment(insideEquipment);
     setCompleteData(data);
@@ -78,43 +77,50 @@ export const PopupContainer = () => {
 
   const boatDimensionUpdate = (value) => {
     console.log('PARENT RECEIVED:', value);
-    setBoatDimension(value)
-  }
+    setBoatDimension(value);
+  };
 
-  const UpdatePage = (ActiveSection: Section, value: BoatFeature) => {
+  const UpdatePage = (ActiveSection: Section, value: BoatFeature):void => {
     console.log('UpDATE DATA:', ActiveSection, value);
     setEditSection(Section.NA);
     switch (ActiveSection) {
       case Section.EDIT_AUTOPILOT:
-        return setAutopilot(value)
-      case Section.EDIT_BATTERIY:
-        return setBattery(value)
-      case Section.EDIT_BIMINI:
-        return setBimini(value)
-      case Section.EDIT_DIGNY:
-        return setDigny(value)
-      default:
+        setBoatAutopilot(value);
         break;
+      case Section.EDIT_BATTERIY:
+        setBoatBattery(value);
+        break;
+      case Section.EDIT_BIMINI:
+        setBoatBimini(value);
+        break;
+      case Section.EDIT_DIGNY:
+        setBoatDigny(value);
+        break;
+      default:
     }
-  }
+  };
 
   const showSection = (item: BoatFeature, ActiveSection: Section) => {
     if (ActiveSection === editSection) {
-      return (<StringBoatFeatureEdit item={item} onUpdate={(value) => UpdatePage(ActiveSection, value)} />)
+      return (<StringBoatFeatureEdit item={item} onUpdate={(value) => UpdatePage(ActiveSection, value)} />);
     }
     return (
       <div onClick={() => setEditSection(ActiveSection)}>
         <StringBoatFeature item={item} />
       </div>
-    )
-  }
+    );
+  };
 
   const showData = () => {
     if (dataRetreived) {
       return (
         <>
           <div className={styles.headerRow}>
-            <h1> Boat: {completeData.name} </h1>
+            <h1>
+              {' '}
+              Boat:
+              {completeData.name}
+            </h1>
             <button type="button" id="discard">Discard</button>
             <button type="button" id="saveData">Save Data</button>
           </div>
@@ -131,9 +137,9 @@ export const PopupContainer = () => {
             />
 
             <hr />
-            {showSection(autopilot, Section.EDIT_AUTOPILOT)}
-            {showSection(battery, Section.EDIT_BATTERIY)}
-            {showSection(solarPower, Section.EDIT_SOLAR)}
+            {showSection(boatAutopilot, Section.EDIT_AUTOPILOT)}
+            {showSection(boatBattery, Section.EDIT_BATTERIY)}
+            {showSection(boatSolarPower, Section.EDIT_SOLAR)}
 
             <hr />
             <BoatSailsSection
@@ -148,10 +154,10 @@ export const PopupContainer = () => {
             />
 
             <hr />
-            {showSection(bimini, Section.EDIT_BIMINI)}
+            {showSection(boatBimini, Section.EDIT_BIMINI)}
 
             <hr />
-            {showSection(digny, Section.EDIT_DIGNY)}
+            {showSection(boatDigny, Section.EDIT_DIGNY)}
           </div>
         </>
       );

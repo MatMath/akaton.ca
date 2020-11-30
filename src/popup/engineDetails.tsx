@@ -13,23 +13,23 @@ interface Props {
   onUpdate: Function
 }
 export const EngineDetailsSection = ({ engine, onUpdate }: Props) => {
-  const [nbrHours, setNbrHours] = React.useState(engine.nbrHours)
-  const [power, setPower] = React.useState(engine.power)
+  const [nbrHours, setNbrHours] = React.useState(engine.nbrHours);
+  const [power, setPower] = React.useState(engine.power);
 
   const handleValueChange = (target: TargetOption, value: string) => {
-    const newDimension = { ...engine, [target]: parseFloat(value) }
+    const newDimension = { ...engine, [target]: parseFloat(value) };
     switch (target) {
       case TargetOption.power:
-        setPower(parseFloat(value))
+        setPower(parseFloat(value));
         break;
       case TargetOption.nbrHours:
-        setNbrHours(parseFloat(value))
+        setNbrHours(parseFloat(value));
         break;
       default:
         break;
     }
-    onUpdate(newDimension)
-  }
+    onUpdate(newDimension);
+  };
   return (
     <div className={styles.mainSection}>
       <div className={styles.itemRow}>
@@ -49,5 +49,5 @@ export const EngineDetailsSection = ({ engine, onUpdate }: Props) => {
         />
       </div>
     </div>
-  )
+  );
 };

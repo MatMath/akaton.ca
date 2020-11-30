@@ -14,27 +14,27 @@ interface Props {
   onUpdate: Function
 }
 export const BoatDimensionSection = ({ dimension, onUpdate }: Props) => {
-  const [beam, setBeam] = React.useState(dimension.beam)
-  const [draft, setDraft] = React.useState(dimension.draft)
-  const [length, setLength] = React.useState(dimension.length)
+  const [beam, setBeam] = React.useState(dimension.beam);
+  const [draft, setDraft] = React.useState(dimension.draft);
+  const [length, setLength] = React.useState(dimension.length);
 
   const handleValueChange = (target: TargetOption, value: string) => {
-    const newDimension = { ...dimension, [target]: parseFloat(value) }
+    const newDimension = { ...dimension, [target]: parseFloat(value) };
     switch (target) {
       case TargetOption.beam:
-        setBeam(parseFloat(value))
+        setBeam(parseFloat(value));
         break;
       case TargetOption.draft:
-        setDraft(parseFloat(value))
+        setDraft(parseFloat(value));
         break;
       case TargetOption.length:
-        setLength(parseFloat(value))
+        setLength(parseFloat(value));
         break;
       default:
         break;
     }
-    onUpdate(newDimension)
-  }
+    onUpdate(newDimension);
+  };
   return (
     <div className={styles.mainSection}>
       <div className={styles.itemRow}>
@@ -61,5 +61,6 @@ export const BoatDimensionSection = ({ dimension, onUpdate }: Props) => {
           onChange={(e) => handleValueChange(TargetOption.length, e.target.value)}
         />
       </div>
-    </div>)
+    </div>
+  );
 };
