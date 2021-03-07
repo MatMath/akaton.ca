@@ -17,6 +17,8 @@ const count = 0;
     },
     (msg) => {
       // Callbck to update the UI
+      // if msg is undefined https://stackoverflow.com/questions/54126343
+      // /how-to-fix-unchecked-runtime-lasterror-the-message-port-closed-before-a-respon
       console.log('result message:', msg);
     });
   });

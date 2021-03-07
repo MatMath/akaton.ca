@@ -48,6 +48,7 @@ export const PopupContainer = () => {
   const [editSection, setEditSection] = React.useState('');
 
   const fetchPageInformation = () => {
+    // TODO get the data from the extractor instead.
     const data = getInitialDefaultValue();
     const {
       dimension,
