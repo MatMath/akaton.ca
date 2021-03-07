@@ -11,7 +11,7 @@ import {
   BoatFeature,
 } from '../popUpContant/types';
 import { getInitialDefaultValue } from '../popUpContant/constant';
-
+import { extractText } from './popup';
 import { BoatDimensionSection } from './boatDimension';
 import { EngineDetailsSection } from './engineDetails';
 import { BoatSailsSection } from './boatSails';
@@ -47,8 +47,9 @@ export const PopupContainer = () => {
   const [dataRetreived, setDataRetreived] = React.useState(false);
   const [editSection, setEditSection] = React.useState('');
 
-  const fetchPageInformation = () => {
-    // TODO get the data from the extractor instead.
+  const fetchPageInformation = async() => {
+    const datafromPage = await extractText();
+    console.log('datafromPage', datafromPage);
     const data = getInitialDefaultValue();
     const {
       dimension,
@@ -164,7 +165,7 @@ export const PopupContainer = () => {
         </>
       );
     }
-    return <button type="button" id="discard" onClick={() => fetchPageInformation()}>FETCH DATA</button>;
+    return <button type="button" id="discard" onClick={() => fetchPageInformation()}>Import</button>;
   };
 
   return (
