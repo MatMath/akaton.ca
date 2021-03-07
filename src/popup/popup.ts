@@ -1,4 +1,18 @@
-function extractText() {
+interface Field {
+  key: string,
+  descriptions: string[],
+};
+
+interface ExtractText {
+  _id: string,
+  _rev: string,
+  title: string,
+  fields: Field[],
+  text: string,
+  url: string,
+};
+
+function extractText() : Promise<ExtractText> {
   return new Promise((resolve, reject) => {
     const queryInfo = {
       active: true,

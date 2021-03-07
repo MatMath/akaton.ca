@@ -3,12 +3,34 @@ import { GenericBoatInformation, Quality, SailType } from './types';
 export const getInitialDefaultValue = (): GenericBoatInformation => ({
   id: '',
   version: 1,
-  name: 'Beneteau',
+  name: '',
   url: '',
+  price: {
+    value: 0,
+    dealBreaker: true,
+    comments: [],
+  },
+  location: {
+    value: 0,
+    dealBreaker: true,
+    comments: [],
+  },
   dimension: {
-    length: 43,
-    beam: 13,
-    draft: 6,
+    length: {
+      value: 43,
+      dealBreaker: true,
+      comments: [],
+    },
+    beam: {
+      value: 13,
+      dealBreaker: true,
+      comments: [],
+    },
+    draft: {
+      value: 6,
+      dealBreaker: true,
+      comments: [],
+    },
   },
   engine: {
     name: 'Volvo',
