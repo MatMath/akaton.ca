@@ -1,6 +1,6 @@
 import * as React from 'react';
 
-import './popup';
+import { extractText } from './popup';
 import styles from './styles.module.css';
 import {
   GenericBoatInformation,
@@ -11,7 +11,7 @@ import {
   BoatFeature,
 } from '../popUpContant/types';
 import { getInitialDefaultValue } from '../popUpContant/constant';
-import { extractText } from './popup';
+
 import { BoatDimensionSection } from './boatDimension';
 import { EngineDetailsSection } from './engineDetails';
 import { BoatSailsSection } from './boatSails';
