@@ -9,6 +9,7 @@ import {
   BoatSails,
   BoatInsideEquipment,
   BoatFeature,
+  // BasicBoatFeature,
 } from '../popUpContant/types';
 import { getInitialDefaultValue } from '../popUpContant/constant';
 
@@ -42,6 +43,7 @@ export const PopupContainer = () => {
   const [boatBimini, setBoatBimini] = React.useState<BoatFeature | null>();
   // extra
   const [boatDigny, setBoatDigny] = React.useState<BoatFeature | null>();
+  // const [boatYear, setBoatYear] = React.useState<BasicBoatFeature | null>();
 
   const [boatInsideEquipment, setBoatInsideEquipment] = React.useState<BoatInsideEquipment | null>();
   const [dataRetreived, setDataRetreived] = React.useState(false);
@@ -49,8 +51,8 @@ export const PopupContainer = () => {
 
   const fetchPageInformation = async () => {
     const data = getInitialDefaultValue();
-    const datafromPage = await extractText();
-    console.log('datafromPage', datafromPage);
+    const { fields = [], title = '' } = await extractText();
+    console.log('datafromPage', fields);
     const {
       dimension,
       engine,
@@ -63,11 +65,12 @@ export const PopupContainer = () => {
       digny,
       price,
       location,
+      year,
     } = data;
 
-    data.name = datafromPage.title;
+    data.name = title;
 
-    const notes = datafromPage.fields
+    const notes = fields
       .filter(({ descriptions }) => !!descriptions);
 
     const today = Date.now();
@@ -94,8 +97,18 @@ export const PopupContainer = () => {
 
       if (key === 'length') {
         const extracted = descriptions.join();
-        dimension.length.value = parseInt(extracted, 10);
+        dimension.length.value = parseInt(extracted.replace('Length: ', ' '), 10);
         dimension.length.comments.push({
+          date: today,
+          text: extracted,
+          user: 'akaton extract 1.0',
+        });
+      }
+
+      if (key === 'year') {
+        const extracted = descriptions.join();
+        year.value = parseInt(extracted, 10);
+        year.comments.push({
           date: today,
           text: extracted,
           user: 'akaton extract 1.0',
@@ -130,6 +143,7 @@ export const PopupContainer = () => {
 
     setBoatBimini(bimini);
     setBoatDigny(digny);
+    setBoatYear(year);
 
     setBoatInsideEquipment(insideEquipment);
     setCompleteData(data);

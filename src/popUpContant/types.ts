@@ -76,4 +76,5 @@ export interface GenericBoatInformation {
   insideEquipment: BoatInsideEquipment,
   bimini: BoatFeature,
   digny: BoatFeature,
+  year: BasicBoatFeature,
 }

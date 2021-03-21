@@ -17,4 +17,5 @@ export const matchers = {
   fuelTank: /(fuel|diesel).* tank.*\n.*\n/gi,
   bimini: /(bimini|hardtop|dodger|spray-hood).*\n.*\n/gi,
   dinghy: /(dinghy|tender).*\n.*\n/gi,
+  year: /\W(19|20)\d\d\W/,
 };

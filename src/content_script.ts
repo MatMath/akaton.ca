@@ -5,14 +5,18 @@ function extract({
   keyword,
   text,
 }) {
-  return text.match(keyword);
+  const matches = text.match(keyword);
+  if (!matches) {
+    return matches;
+  }
+  return matches.map((match) => match.replace(/\n/, ' '));
 }
 
-const isBoatingSite = /(boat|yacht)/;
+const isBoatingSite = /(boat|yacht)/i;
 
 function contentScript() {
-  if (!isBoatingSite.test(window.location.href)) {
-    // avoid running on irrelevant pages for now
+  const { href } = window.location;
+  if (!isBoatingSite.test(href)) {
     return;
   }
   const dbname = 'cesine-akaton';
@@ -53,7 +57,7 @@ function contentScript() {
 
     db.get(docId)
       .then((doc) => {
-        console.log('doc akready existed', doc);
+        console.log('doc already existed', doc);
         return doc;
       })
       .catch((err) => {
@@ -95,7 +99,11 @@ function contentScript() {
         sendResponse(serialized);
         return boat;
       })
-      .catch(console.log);
+      .catch((err) => {
+        console.log('error', err);
+        sendResponse(JSON.stringify({ message: err.message, stack: err.stack }));
+        return err;
+      });
     // sendResponse(text);
     // sendResponse('results ' + result? result.join('\n') : 'nothing');
 

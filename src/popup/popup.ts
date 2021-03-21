@@ -13,7 +13,7 @@ interface ExtractText {
 }
 
 function extractText() : Promise<ExtractText> {
-  return new Promise((resolve) => {
+  return new Promise((resolve, reject) => {
     const queryInfo = {
       active: true,
       currentWindow: true,
@@ -29,7 +29,12 @@ function extractText() : Promise<ExtractText> {
         // if msg is undefined https://stackoverflow.com/questions/54126343
         // /how-to-fix-unchecked-runtime-lasterror-the-message-port-closed-before-a-respon
         console.log('result message:', msg);
-        resolve(msg ? JSON.parse(msg) : {});
+        const result = msg ? JSON.parse(msg) : {};
+        if (result.message) {
+          reject(result);
+          return;
+        }
+        resolve(result);
       });
     });
 
