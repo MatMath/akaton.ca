@@ -118,7 +118,11 @@ export const StringBoatFeature = ({ item }: {item:BoatFeature}) => {
   };
   return (
     <div className={styles.itemRow}>
-      <strong className={dealBreakerClass}>{item.section}</strong>
+      <strong className={dealBreakerClass}>
+        {item.section}
+        :
+        {' '}
+      </strong>
       <div className={dealBreakerClass}>
         name:
         {' '}

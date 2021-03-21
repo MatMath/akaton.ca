@@ -17,14 +17,19 @@ export interface CommentsStructure {
   date: number // timestamp format
 }
 
-export interface BoatFeature {
-  section: string,
-  name: string,
-  value: string | number
-  quality: Quality,
+export interface BasicBoatFeature {
+  value: string | number,
   dealBreaker: boolean,
-  replacementCost: number,
-  comments: CommentsStructure[] | []
+  comments: CommentsStructure[],
+}
+
+export interface BoatFeature extends BasicBoatFeature{
+  // Section is like the title of the feature
+  section: string,
+  // this can  be the type or brand
+  name: string,
+  quality?: Quality,
+  replacementCost?: number,
 }
 
 export interface Sail extends BoatFeature {
@@ -37,9 +42,9 @@ export interface EngineDetails extends BoatFeature {
 }
 
 export interface BoatDimension {
-  length: number,
-  beam: number,
-  draft: number
+  length: BasicBoatFeature,
+  beam: BasicBoatFeature,
+  draft: BasicBoatFeature
 }
 
 export interface BoatSails {
@@ -60,6 +65,8 @@ export interface GenericBoatInformation {
   name: string,
   id: string,
   url: string,
+  location: BasicBoatFeature,
+  price: BasicBoatFeature,
   dimension: BoatDimension,
   engine: EngineDetails,
   autopilot: BoatFeature,

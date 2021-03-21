@@ -1,6 +1,6 @@
 import * as React from 'react';
 
-import './popup';
+import { extractText } from './popup';
 import styles from './styles.module.css';
 import {
   GenericBoatInformation,
@@ -47,8 +47,10 @@ export const PopupContainer = () => {
   const [dataRetreived, setDataRetreived] = React.useState(false);
   const [editSection, setEditSection] = React.useState('');
 
-  const fetchPageInformation = () => {
+  const fetchPageInformation = async () => {
     const data = getInitialDefaultValue();
+    const datafromPage = await extractText();
+    console.log('datafromPage', datafromPage);
     const {
       dimension,
       engine,
@@ -59,7 +61,66 @@ export const PopupContainer = () => {
       insideEquipment,
       bimini,
       digny,
+      price,
+      location,
     } = data;
+
+    data.name = datafromPage.title;
+
+    const notes = datafromPage.fields
+      .filter(({ descriptions }) => !!descriptions);
+
+    const today = Date.now();
+    notes.forEach(({ key, descriptions }) => {
+      if (key === 'location') {
+        const extracted = descriptions.join();
+        location.value = extracted;
+        location.comments.push({
+          date: today,
+          text: extracted,
+          user: 'akaton extract 1.0',
+        });
+      }
+
+      if (key === 'price') {
+        const extracted = descriptions.join();
+        price.value = parseInt(extracted, 10);
+        price.comments.push({
+          date: today,
+          text: extracted,
+          user: 'akaton extract 1.0',
+        });
+      }
+
+      if (key === 'length') {
+        const extracted = descriptions.join();
+        dimension.length.value = parseInt(extracted, 10);
+        dimension.length.comments.push({
+          date: today,
+          text: extracted,
+          user: 'akaton extract 1.0',
+        });
+      }
+
+      if (key === 'engine') {
+        const extracted = descriptions.join();
+        engine.comments.push({
+          date: today,
+          text: extracted,
+          user: 'akaton extract 1.0',
+        });
+      }
+
+      if (key === 'rigging') {
+        const extracted = descriptions.join();
+        sails.rigging.comments.push({
+          date: today,
+          text: extracted,
+          user: 'akaton extract 1.0',
+        });
+      }
+    });
+
     setBoatDimension(dimension);
     setEngineDetails(engine);
     setBoatAutopilot(autopilot);
@@ -80,7 +141,7 @@ export const PopupContainer = () => {
     setBoatDimension(value);
   };
 
-  const UpdatePage = (ActiveSection: Section, value: BoatFeature):void => {
+  const UpdatePage = (ActiveSection: Section, value: BoatFeature): void => {
     console.log('UpDATE DATA:', ActiveSection, value);
     setEditSection(Section.NA);
     switch (ActiveSection) {
@@ -163,7 +224,7 @@ export const PopupContainer = () => {
         </>
       );
     }
-    return <button type="button" id="discard" onClick={() => fetchPageInformation()}>FETCH DATA</button>;
+    return <button type="button" id="discard" onClick={() => fetchPageInformation()}>Import</button>;
   };
 
   return (

@@ -14,9 +14,9 @@ interface Props {
   onUpdate: Function
 }
 export const BoatDimensionSection = ({ dimension, onUpdate }: Props) => {
-  const [beam, setBeam] = React.useState(dimension.beam);
-  const [draft, setDraft] = React.useState(dimension.draft);
-  const [length, setLength] = React.useState(dimension.length);
+  const [beam, setBeam] = React.useState(dimension.beam.value);
+  const [draft, setDraft] = React.useState(dimension.draft.value);
+  const [length, setLength] = React.useState(dimension.length.value);
 
   const handleValueChange = (target: TargetOption, value: string) => {
     const newDimension = { ...dimension, [target]: parseFloat(value) };
