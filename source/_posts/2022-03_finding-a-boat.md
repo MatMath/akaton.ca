@@ -1,6 +1,6 @@
 ---
 title: Where did it start?
-# cover_index: /images/box1.jpg
+cover_index: /images/2022-03_finding-a-boat_big_icon.png
 # cover_detail: /images/cover.jpg
 ---
 
@@ -104,27 +104,9 @@ title: Where did it start?
 
 <p>We found an inspector Walsh that is super good at inspection, if there is a defect he will find it. {{AUTHOR_CESINE}} was there for the inspection and of course, {{AUTHOR_CESINE}} also found details that Walsh missed 🤣. There were some red flags for the boat like structural and oddity so we wanted to make an offer of 61k since there were so many red flags, but the agent convinced to made at least a higher offer of 64k. They rejected it so we move along. As simple as that. But {{AUTHOR_CESINE}} was in Greece now so she kept going and scouted all corners to find the “perfect boat”. We found 2 but by the time we made an offer one was gone. We looked at another one JackAnne owned by a French couple. Again {{AUTHOR_CESINE}} found where the boat was without any help from the agent. It surprised the agent again to see {{AUTHOR_CESINE}} there without any help 😂. We inspected and saw it had a few items to fix, but nothing major, so we made a cautious offer around the asking price of 74k. And… we got it. But… we could not make the inspection now since it was not ready so we had to wait 1 month before we could do it. {{AUTHOR_CESINE}} was already there for about 1 month, so she had to exit Greece (Schengen zone) until they were ready for an inspection. We both flew back for 1 week for the inspection and all went well since {{AUTHOR_CESINE}} spotted most of the items already.</p>
 
-<!-- /wp:paragraph -->
-
-<!-- wp:heading {\"style\":{\"typography\":{\"fontSize\":\"22px\"}}} -->
-
 <h2 style=\"font-size:22px\">Result:</h2>
 
-<!-- /wp:heading -->
-
-<!-- wp:image {\"id\":97,\"sizeSlug\":\"large\",\"linkDestination\":\"none\"} -->
-
-<figure class=\"wp-block-image size-large\">
-<img src=\"https://akaton.ca/blog/wp-content/uploads/2023/01/Screen-Shot-2023-01-01-at-3.58.07-PM-1024x535.png\" alt=\"\" class=\"wp-image-97\"/>
+<img src="/images/2022-03_finding-a-boat_big.png">
 <figcaption class=\"wp-element-caption\">Hahaha Nop!</figcaption>
 </figure>
 
-<!-- /wp:image -->
-
-<!-- wp:paragraph -->
-
-<p>
-</p>
-
-<!-- /wp:paragraph -->
-','Finding a boat','','inherit','closed','closed','','72-revision-v1','','','2023-02-12 22:21:26','2023-02-12 22:21:26','',72,'https://akaton.ca/blog/?p=235',0,'revision','',0),(236,2,'2023-02-12 22:32:19','2023-02-12 22:32:19','
