@@ -1,3 +1,8 @@
+---
+title: List of places & tools
+# cover_index: /images/box1.jpg
+# cover_detail: /images/cover.jpg
+---
 
 <p>Here is a list of boatyards/tavernas/apps/books that we recommend. </p>
 

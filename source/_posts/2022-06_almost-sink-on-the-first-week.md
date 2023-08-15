@@ -1,3 +1,8 @@
+---
+title: Almost sinking on first week
+# cover_index: /images/box1.jpg
+# cover_detail: /images/cover.jpg
+---
 
 <h3 class=\"has-normal-font-size\">What happened???</h3>
 

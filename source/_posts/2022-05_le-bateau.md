@@ -1,3 +1,8 @@
+---
+title: The Boat!
+# cover_index: /images/box1.jpg
+# cover_detail: /images/cover.jpg
+---
 
 <p>As a great sailor said, if the boat float it\'s a 10 -- Captain Q</p>
 

@@ -1,3 +1,8 @@
+---
+title: Where did it start?
+# cover_index: /images/box1.jpg
+# cover_detail: /images/cover.jpg
+---
 
 <h2 style=\"font-size:24px\">Where did it start?</h2>
 

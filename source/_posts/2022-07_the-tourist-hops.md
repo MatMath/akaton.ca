@@ -1,3 +1,8 @@
+---
+title: The Torist Hops
+# cover_index: /images/box1.jpg
+# cover_detail: /images/cover.jpg
+---
 
 <p>
 </p>
