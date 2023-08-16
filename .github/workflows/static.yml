@@ -34,9 +34,9 @@ jobs:
       - name: Setup Pages
         uses: actions/configure-pages@v3
       - name: Install
-      - run: npm ci
+        run: npm ci
       - name: Build
-      - run: AUTHOR_MATMATH=${{ secrets.AUTHOR_MATMATH }} AUTHOR_CESINE=${{ secrets.AUTHOR_CESINE }} npm run build
+        run: AUTHOR_MATMATH=${{ secrets.AUTHOR_MATMATH }} AUTHOR_CESINE=${{ secrets.AUTHOR_CESINE }} npm run build
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v2
         with:
