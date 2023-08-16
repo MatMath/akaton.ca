@@ -3,17 +3,17 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: Hexo
+title: Akaton Adventure
 subtitle: ''
 description: ''
 keywords:
-author: John Doe
+author: {{AUTHOR_MATMATH}} and {{AUTHOR_CESINE}}
 language: en
 timezone: ''
 
 # URL
 ## Set your site url here. For example, if you use GitHub Page, set url as 'https://username.github.io/project'
-url: http://example.com
+url: http://Akaton.ca
 permalink: :year/:month/:day/:title/
 permalink_defaults:
 pretty_urls:
@@ -95,9 +95,9 @@ exclude:
 ignore:
 
 # Extensions
-## Plugins: https://hexo.io/plugins/
-## Themes: https://hexo.io/themes/
-theme: landscape
+## Plugins: http://hexo.io/plugins/
+## Themes: http://hexo.io/themes/
+theme: phantom
 
 # Deployment
 ## Docs: https://hexo.io/docs/one-command-deployment
