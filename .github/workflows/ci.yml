@@ -21,9 +21,10 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: ${{ matrix.node-version }}
+        env:
           AUTHOR_CESINE: ${{ secrets.AUTHOR_CESINE }}
           AUTHOR_MATMATH: ${{ secrets.AUTHOR_MATMATH }}
       - run: npm ci
-      - run: AUTHOR_MATMATH={{env.AUTHOR_MATMATH}} npm run build:authors
+      - run: AUTHOR_MATMATH=${{ env.AUTHOR_MATMATH }} npm run build:authors
       - run: npm run build
       - run: npm test
