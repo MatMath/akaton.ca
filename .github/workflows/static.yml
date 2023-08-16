@@ -3,9 +3,9 @@ name: Deploy static content to Pages
 
 on:
   push:
-    branches: [ main, data ]
+    branches: [ main, data, deploy ]
   pull_request:
-    branches: [ main, data ]
+    branches: [ main, data, deploy ]
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
