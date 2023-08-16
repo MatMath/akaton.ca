@@ -4,10 +4,14 @@
   "private": true,
   "scripts": {
     "build": "hexo generate",
+    "prebuild": "npm run build:authors",
     "clean": "hexo clean",
     "deploy": "hexo deploy",
-    "build:authors": "sed -i \"s/{{AUTHOR_MATMATH}}/${AUTHOR_MATMATH}/\" _config.yml; sed -i \"s/{{AUTHOR_CESINE}}/${AUTHOR_CESINE}/\" _config.yml; git diff",
-    "server": "hexo server"
+    "build:authors": "sed -i \"s/{{AUTHOR_MATMATH}}/${AUTHOR_MATMATH}/\" _config.yml; sed -i \"s/{{AUTHOR_CESINE}}/${AUTHOR_CESINE}/\" _config.yml",
+    "build:authors:undo": "sed -i \"s/${AUTHOR_MATMATH}/{{AUTHOR_MATMATH}}/\" _config.yml; sed -i \"s/${AUTHOR_CESINE}/{{AUTHOR_CESINE}}/\" _config.yml",
+    "server": "hexo server",
+    "preserver": "npm run build:authors",
+    "postserver": "npm run build:authors:undo"
   },
   "hexo": {
     "version": "6.3.0"
