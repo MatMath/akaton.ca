@@ -21,6 +21,7 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: ${{ matrix.node-version }}
+          environment: jelly
         env:
           AUTHOR_CESINE: ${{ secrets.AUTHOR_CESINE }}
           AUTHOR_MATMATH: ${{ secrets.AUTHOR_MATMATH }}
