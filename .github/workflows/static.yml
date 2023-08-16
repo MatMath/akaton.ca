@@ -1,9 +1,11 @@
 # Simple workflow for deploying static content to GitHub Pages
-name: Deploy static content to Pages
+name: Deploy
 
 on:
-  # Runs on pushes targeting the default branch
+  push:
+    branches: [ main, data, deploy ]
   pull_request:
+    branches: [ main, data, deploy ]
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
@@ -21,20 +23,20 @@ concurrency:
   cancel-in-progress: false
 
 jobs:
-  runs-on: ubuntu-latest
-  strategy:
-    matrix:
-      node-version: [18.x]
-  steps:
-    - uses: actions/checkout@v3
-    - name: Use Node.js ${{ matrix.node-version }}
-      uses: actions/setup-node@v3
-      with:
-        node-version: ${{ matrix.node-version }}
-    - run: npm ci
-    - run: npm run build
-    - run: npm test
-  # Single deploy job since we're just deploying
+  build:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version: [18.x]
+    steps:
+      - uses: actions/checkout@v3
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v3
+        with:
+          node-version: ${{ matrix.node-version }}
+      - run: npm ci
+      - run: AUTHOR_MATMATH=${{ secrets.AUTHOR_MATMATH }} AUTHOR_CESINE=${{ secrets.AUTHOR_CESINE }} npm run build
+      # - run: npm test
   deploy:
     environment:
       name: github-pages
