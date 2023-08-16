@@ -6,6 +6,7 @@
     "build": "hexo generate",
     "clean": "hexo clean",
     "deploy": "hexo deploy",
+    "build:authors": "sed -i \"s/{{AUTHOR_MATMATH}}/${AUTHOR_MATMATH}/\" _config.yml; sed -i \"s/{{AUTHOR_CESINE}}/${AUTHOR_CESINE}/\" _config.yml; git diff",
     "server": "hexo server"
   },
   "hexo": {
