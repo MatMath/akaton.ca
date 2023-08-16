@@ -2,9 +2,9 @@ name: Node.js CI
 
 on:
   push:
-    branches: [ main ]
+    branches: [ main, data ]
   pull_request:
-    branches: [ main ]
+    branches: [ main, data ]
 
 jobs:
   build:
@@ -17,10 +17,13 @@ jobs:
 
     steps:
       - uses: actions/checkout@v3
-      - name: Use Node.js ${{ matrix.node-version }}
+      - name: Node.js ${{ matrix.node-version }}
         uses: actions/setup-node@v3
         with:
           node-version: ${{ matrix.node-version }}
       - run: npm ci
+      - run: AUTHOR_MATMATH=${{ secrets.AUTHOR_MATMATH }} AUTHOR_CESINE=${{ secrets.AUTHOR_CESINE }} npm run build:authors
       - run: npm run build
+      - run: git diff
+      - run: AUTHOR_MATMATH=${{ secrets.AUTHOR_MATMATH }} AUTHOR_CESINE=${{ secrets.AUTHOR_CESINE }} npm run build:authors:undo
       - run: npm test
