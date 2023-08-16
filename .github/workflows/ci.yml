@@ -16,14 +16,14 @@ jobs:
         node-version: [18.x, 20.x]
 
     steps:
-      env:
-        AUTHOR_CESINE: ${{ secrets.AUTHOR_CESINE }}
-        AUTHOR_MATMATH: ${{ secrets.AUTHOR_MATMATH }}
       - uses: actions/checkout@v3
-      - name: Use Node.js ${{ matrix.node-version }}
+      - name: Node.js ${{ matrix.node-version }}
         uses: actions/setup-node@v3
         with:
           node-version: ${{ matrix.node-version }}
+        env:
+          AUTHOR_CESINE: ${{ secrets.AUTHOR_CESINE }}
+          AUTHOR_MATMATH: ${{ secrets.AUTHOR_MATMATH }}
       - run: npm ci
       - run: npm run build:authors
       - run: npm run build
