@@ -1,3 +1,7 @@
+---
+title: À propos
+---
+
 <h2>About us</h2>
 <p>We are us.</p>
 <p>You know who we are.</p>

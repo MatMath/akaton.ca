@@ -1,5 +1,5 @@
 ---
-title: About us
+title: Accueil
 # cover_index: /images/box1.jpg
 # cover_detail: /images/cover.jpg
 ---

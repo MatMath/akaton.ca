@@ -1,7 +1,9 @@
 ---
 title: The Boat!
+date: 2022-04-03
 cover_index: /images/2022-05_akaton_icon.jpg
 # cover_detail: /images/cover.jpg
+tags: Ελλάδα
 ---
 
 <p>As a great sailor said, if the boat float it's a 10 -- Captain Q</p>

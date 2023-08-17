@@ -1,7 +1,9 @@
 ---
 title: Where did it start?
+date: 2022-02-28
 cover_index: /images/2022-03_finding-a-boat_big_icon.png
 # cover_detail: /images/cover.jpg
+tags: Montréal
 ---
 
 <h2 style="font-size:24px">Where did it start?</h2>
