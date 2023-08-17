@@ -11,13 +11,13 @@ cover_index: /images/2022-05_akaton_icon.jpg
 <p>Akaton is a 2000 Jeanneau Sun Odyssey 42.2. She was previously named Jakane, and Marie Dieu.</p>
 
 <img src="https://sailboatdata.com/storage/EQ67ePlpXnphm3ao52D8BFPPyLqJ1rm8ShsnzY7A.jpeg">
-<figcaption class=\"wp-element-caption\">A generic photo of the Sun Odyssey 42.2 from original sales materials.</figcaption>
+<figcaption class="wp-element-caption">A generic photo of the Sun Odyssey 42.2 from original sales materials.</figcaption>
 
 <p>Akaton is 12.3 meters long, and 4.1 meters wide with a 2 meter draft. She has 3 cabins (she has a 4 cabin layout, with the separators removed to convert the bunks into shelves).</p>
 
 <img src="https://sailboatdata.com/storage/HLAoAIc8kix1fpDFSy6hffubn098Epe3ZhbvVZQ3.jpeg">
 
-<p>For more detailed info you can see the sailboat database: <a href=\"https://sailboatdata.com/sailboat/sun-odyssey-422-jeanneau\">layout and specs</a></p>
+<p>For more detailed info you can see the sailboat database: <a href="https://sailboatdata.com/sailboat/sun-odyssey-422-jeanneau">layout and specs</a></p>
 
 <ul>
 <li>440L of water or ~20-30day of careful water usage for 2 people</li>
