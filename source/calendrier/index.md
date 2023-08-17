@@ -4,7 +4,7 @@ title: Calendrier
 # cover_detail: /images/cover.jpg
 ---
 
-<iframe src=\"https://calendar.google.com/calendar/embed?height=600&amp;wkst=1&amp;bgcolor=%23ffffff&amp;ctz=Europe%2FBelgrade&amp;showTabs=0&amp;showCalendars=0&amp;showPrint=0&amp;showNav=1&amp;title=O%C3%B9%20sommes-nous%20quand...%20Where%20are%20we%20when...&amp;src=NDRtbzkzam83aGZobDQwZW41cTkxODdocThAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&amp;src=ZW4uY2FuYWRpYW4jaG9saWRheUBncm91cC52LmNhbGVuZGFyLmdvb2dsZS5jb20&amp;color=%2333B679&amp;color=%230B8043\" style=\"border:solid 1px #777\" width=\"800\" height=\"600\" frameborder=\"0\" scrolling=\"no\">
+<iframe src="https://calendar.google.com/calendar/embed?height=600&amp;wkst=1&amp;bgcolor=%23ffffff&amp;ctz=Europe%2FBelgrade&amp;showTabs=0&amp;showCalendars=0&amp;showPrint=0&amp;showNav=1&amp;title=O%C3%B9%20sommes-nous%20quand...%20Where%20are%20we%20when...&amp;src=NDRtbzkzam83aGZobDQwZW41cTkxODdocThAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&amp;src=ZW4uY2FuYWRpYW4jaG9saWRheUBncm91cC52LmNhbGVuZGFyLmdvb2dsZS5jb20&amp;color=%2333B679&amp;color=%230B8043" style="border:solid 1px #777" width="800" height="600" frameborder="0" scrolling="no">
 </iframe>
 
 <!-- /wp:html -->
@@ -15,7 +15,7 @@ title: Calendrier
 
 <!-- /wp:heading -->
 
-<!-- wp:list {\"ordered\":true} -->
+<!-- wp:list {"ordered":true} -->
 
 <ol>
 
@@ -39,7 +39,7 @@ title: Calendrier
 
 <!-- wp:list-item -->
 
-<li>Create an event on <a href=\"https://calendar.google.com/calendar/u/0/r\" target=\"_blank\" rel=\"noreferrer noopener\">your Gmail calendar</a>
+<li>Create an event on <a href="https://calendar.google.com/calendar/u/0/r" target="_blank" rel="noreferrer noopener">your Gmail calendar</a>
 </li>
 
 <!-- /wp:list-item -->
@@ -114,7 +114,7 @@ title: Calendrier
 
 <p>
 <strong>Can I boatsit if I don\'t know how to drive a boat?<br>
-</strong>Yes! We will anchor the boat somewhere it is protected. We will show you how to drive the boat and let you practice lifting the anchor and setting the anchor, but you won\'t need to move it if you don\'t know how. You can get around and go fishing using the digny (our \"car\" that has a small outboard engine).</p>
+</strong>Yes! We will anchor the boat somewhere it is protected. We will show you how to drive the boat and let you practice lifting the anchor and setting the anchor, but you won\'t need to move it if you don\'t know how. You can get around and go fishing using the digny (our "car" that has a small outboard engine).</p>
 
 <!-- /wp:paragraph -->
 
@@ -128,7 +128,7 @@ title: Calendrier
 
 <!-- wp:quote -->
 
-<blockquote class=\"wp-block-quote\">
+<blockquote class="wp-block-quote">
 
 <!-- wp:paragraph -->
 
@@ -141,10 +141,10 @@ title: Calendrier
 
 <!-- /wp:quote -->
 
-<!-- wp:embed {\"url\":\"https://www.youtube.com/embed/QvJcX3JkVW8\",\"type\":\"rich\",\"providerNameSlug\":\"embed-handler\",\"responsive\":true,\"className\":\"wp-embed-aspect-16-9 wp-has-aspect-ratio\"} -->
+<!-- wp:embed {"url":"https://www.youtube.com/embed/QvJcX3JkVW8","type":"rich","providerNameSlug":"embed-handler","responsive":true,"className":"wp-embed-aspect-16-9 wp-has-aspect-ratio"} -->
 
-<figure class=\"wp-block-embed is-type-rich is-provider-embed-handler wp-block-embed-embed-handler wp-embed-aspect-16-9 wp-has-aspect-ratio\">
-<div class=\"wp-block-embed__wrapper\">
+<figure class="wp-block-embed is-type-rich is-provider-embed-handler wp-block-embed-embed-handler wp-embed-aspect-16-9 wp-has-aspect-ratio">
+<div class="wp-block-embed__wrapper">
 https://www.youtube.com/embed/QvJcX3JkVW8
 </div>
 </figure>
