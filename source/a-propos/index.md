@@ -1,5 +1,5 @@
 ---
-title: a-propos
+title: À propos
 ---
 
 <h2>About us</h2>

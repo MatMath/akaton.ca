@@ -3,7 +3,7 @@ title: Moving in
 # cover_index: /images/box1.jpg
 # cover_detail: /images/cover.jpg
 date: 2022-05-20
-tags: Croatia
+tags: Ελλάδα
 ---
 
 <h2 style=\"font-size:22px\">Boring details here:</h2>
