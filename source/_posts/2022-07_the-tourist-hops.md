@@ -1,5 +1,5 @@
 ---
-title: The Torist Hops
+title: The Tourist Hops
 # cover_index: /images/box1.jpg
 # cover_detail: /images/cover.jpg
 ---
