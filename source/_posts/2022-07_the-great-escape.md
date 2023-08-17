@@ -1,7 +1,9 @@
 ---
 title: The great escape!
+date: 2022-07-15
 # cover_index: /images/box1.jpg
 # cover_detail: /images/cover.jpg
+tags: Ελλάδα
 ---
 
 <p>Now it is July 4 and we must be out of the country by July 14 at a maximum!!! Exceeding the 90-day Schengen zone is dangerous. It could even lead to getting banned!?!?!  And we still have more than 230 nm ahead of us (almost double what we just did in less time). This means we have to Book it FAST! So as soon as we dropped our friend to the bus we went back to the boat, clean the boat and prepare for our first 2 full days at sea. We are planning a 4h shift rotation so it\'s manageable at night. How it goes is: Good breakfast, planning for a few snacks for the first day that is easy to do (leftover), and then all goes random for the second day. We did cook a few times, but it depends a lot on the sea state. </p>

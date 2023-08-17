@@ -1,3 +1,8 @@
+---
+title: Calendrier
+# cover_index: /images/2022-places-icon.png
+# cover_detail: /images/cover.jpg
+---
 
 <iframe src=\"https://calendar.google.com/calendar/embed?height=600&amp;wkst=1&amp;bgcolor=%23ffffff&amp;ctz=Europe%2FBelgrade&amp;showTabs=0&amp;showCalendars=0&amp;showPrint=0&amp;showNav=1&amp;title=O%C3%B9%20sommes-nous%20quand...%20Where%20are%20we%20when...&amp;src=NDRtbzkzam83aGZobDQwZW41cTkxODdocThAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&amp;src=ZW4uY2FuYWRpYW4jaG9saWRheUBncm91cC52LmNhbGVuZGFyLmdvb2dsZS5jb20&amp;color=%2333B679&amp;color=%230B8043\" style=\"border:solid 1px #777\" width=\"800\" height=\"600\" frameborder=\"0\" scrolling=\"no\">
 </iframe>

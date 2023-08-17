@@ -1,7 +1,9 @@
 ---
 title: Almost sinking on first week
+date: 2022-05-31
 cover_index: /images/2022-06_loop-map.png
 # cover_detail: /images/cover.jpg
+tags: Ελλάδα
 ---
 
 <h3>What happened???</h3>
