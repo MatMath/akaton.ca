@@ -36,7 +36,7 @@ jobs:
       - name: Install
         run: npm ci
       - name: Build
-        run: sed -i \"s/# url/url /\" _config.yml; AUTHOR_MATMATH=${{ secrets.AUTHOR_MATMATH }} AUTHOR_CESINE=${{ secrets.AUTHOR_CESINE }} npm run build
+        run: sed -i "s/# url:/url:/" _config.yml; AUTHOR_MATMATH=${{ secrets.AUTHOR_MATMATH }} AUTHOR_CESINE=${{ secrets.AUTHOR_CESINE }} npm run build
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v2
         with:
