@@ -1,9 +1,10 @@
 ---
 title: Where did it start?
 date: 2022-02-28
-cover_index: /images/2022-03_finding-a-boat_big_icon.png
+cover_index: https://matmath.github.io/akaton.ca/images/2022-03_finding-a-boat_big_icon.png
 # cover_detail: /images/cover.jpg
 tags: Montréal
+akaton_url: https://matmath.github.io/akaton.ca
 ---
 
 <h2 style="font-size:24px">Where did it start?</h2>
@@ -40,7 +41,7 @@ tags: Montréal
 
 <h2 style="font-size:22px">Result:</h2>
 
-<img src="/images/2022-03_finding-a-boat_big.png">
+<img src="{{ .Params.akaton_url }}/images/2022-03_finding-a-boat_big.png">
 <figcaption class="wp-element-caption">Hahaha Nop!</figcaption>
 </figure>
 
