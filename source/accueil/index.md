@@ -8,7 +8,7 @@ akaton_url: https://matmath.github.io/akaton.ca
 <p>We are {{AUTHOR_CESINE}} and {{AUTHOR_MATMATH}} from Montréal, Canada. We speak French and English, and we are learning Croatian, Greek, German and Turkish. We started our travels in Porto Heli, Greece. Since then we have sailed over 1,200 nautical miles (2,200km) through the Peloponnese, Montenegro and Croatia. We are friendly, come say hi to us if you see our boat in the anchorage. {{AUTHOR_CESINE}} is a fieldlinguist who has lived in over 30 countries and volunteers for <a href="http://github.com/cesine" data-type="URL" data-id="http://github.com/cesine">OpenSource</a> in her spare time and {{AUTHOR_MATMATH}} used to inspect and repair electronics in a salle blanche en imagerie medical RMA team. We work in the evenings, so the best time to say hi is morning or midday when we are outside paddleboarding or doing boat projects.</p>
 
 <figure class="wp-block-image size-large">
-<img src="{{ akaton_url }}/images/2022-trace.png" alt="" class="wp-image-221"/>
+<img src="{{AKATON_URL}}/images/2022-trace.png" alt="" class="wp-image-221"/>
 <figcaption class="wp-element-caption">Our exported <a href="https://drive.google.com/file/d/1AJh8o5PqCwSffShAjM11Wmbqt5Fb_HXb/view?usp=share_link">GPS traces</a> from Navionics, viewed using <a href="https://www.routeconverter.com/home/fr" data-type="URL" data-id="https://www.routeconverter.com/home/fr">RouteConverter</a>
 </figcaption>
 </figure>

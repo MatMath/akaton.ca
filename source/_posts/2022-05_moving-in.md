@@ -31,35 +31,35 @@ akaton_url: https://matmath.github.io/akaton.ca
 <p>We made an offer around February, made the inspection on March 10 and were supposed to take possession on May 1 just in time for the summer!!!&nbsp; As young(ish) excited people, we were rushing everything and we tough that from May-1 we would have all the paperwork to register the boat. BUT… we jumped a few steps as usual. So we arrived at the boat with a few boxes expecting “to move in” then we would register and within 1 week we would be out sailing. The Dream…</p>
 
 <figure class="wp-block-image aligncenter size-large is-resized">
-<img src="{{akaton_url}}/images/2022-05/moving-1-1024x768.jpg" alt="" class="wp-image-163" width="768" height="576"/>
+<img src="{{AKATON_URL}}/images/2022-05/moving-1-1024x768.jpg" alt="" class="wp-image-163" width="768" height="576"/>
 </figure>
 
 <figure class="wp-block-image aligncenter size-large is-resized">
-<img src="{{akaton_url}}/images/2022-05/box-1024x768.jpg" alt="" class="wp-image-164" width="768" height="576"/>
+<img src="{{AKATON_URL}}/images/2022-05/box-1024x768.jpg" alt="" class="wp-image-164" width="768" height="576"/>
 </figure>
 
 <p>When we arrived we were welcomed by the previous owner that now lives nearby, but the paperwork was at “Sign contract from the seller” step, so far back from what we were expecting. This mean we were stuck at anchor without registration and insurance until we could get it sorted. We tried to get everything done as fast as possible, which mean we floated there for 1 month until all were in order. It was boring and slightly annoying, but we have time to buy a bunch of stuff at our favourite marina store and enjoy the nice little town!</p>
 
 <figure class="wp-block-image aligncenter size-large is-resized">
-<img src="{{akaton_url}}/images/2022-05/anchor-1024x768.jpeg" alt="" class="wp-image-165" width="768" height="576"/>
+<img src="{{AKATON_URL}}/images/2022-05/anchor-1024x768.jpeg" alt="" class="wp-image-165" width="768" height="576"/>
 </figure>
 
 <figure class="wp-block-image aligncenter size-large is-resized">
-<img src="{{akaton_url}}/images/2022-05/PXL_20220510_123950358.MP_-1024x768.jpg" alt="" class="wp-image-167" width="768" height="576"/>
+<img src="{{AKATON_URL}}/images/2022-05/PXL_20220510_123950358.MP_-1024x768.jpg" alt="" class="wp-image-167" width="768" height="576"/>
 </figure>
 
 <figure class="wp-block-image aligncenter size-large is-resized">
-<img src="{{akaton_url}}/images/2022-05/20220509_201509-1024x768.jpg" alt="" class="wp-image-168" width="768" height="576"/>
+<img src="{{AKATON_URL}}/images/2022-05/20220509_201509-1024x768.jpg" alt="" class="wp-image-168" width="768" height="576"/>
 </figure>
 
 <figure class="wp-block-image aligncenter size-full is-resized">
-<img src="{{akaton_url}}/images/2022-05/PXL_20220501_111949392.MP_-scaled.jpg" alt="" class="wp-image-169" width="768" height="580"/>
+<img src="{{AKATON_URL}}/images/2022-05/PXL_20220501_111949392.MP_-scaled.jpg" alt="" class="wp-image-169" width="768" height="580"/>
 </figure>
 
 <figure class="wp-block-image aligncenter size-large is-resized">
-<img src="{{akaton_url}}/images/2022-05/PXL_20220505_032159841.MP_-1024x768.jpg" alt="" class="wp-image-170" width="768" height="576"/>
+<img src="{{AKATON_URL}}/images/2022-05/PXL_20220505_032159841.MP_-1024x768.jpg" alt="" class="wp-image-170" width="768" height="576"/>
 </figure>
 
 <figure class="wp-block-image aligncenter size-large is-resized">
-<img src="{{akaton_url}}/images/2022-05/PXL_20220521_130336879-1024x768.jpg" alt="" class="wp-image-171" width="768" height="576"/>
+<img src="{{AKATON_URL}}/images/2022-05/PXL_20220521_130336879-1024x768.jpg" alt="" class="wp-image-171" width="768" height="576"/>
 </figure>

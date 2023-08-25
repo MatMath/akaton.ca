@@ -1,8 +1,8 @@
 ---
 title: The great escape!
 date: 2022-07-15
-# cover_index: {{ akaton_url }}/images/box1.jpg
-# cover_detail: {{ akaton_url }}/images/cover.jpg
+# cover_index: {{AKATON_URL}}/images/box1.jpg
+# cover_detail: {{AKATON_URL}}/images/cover.jpg
 tags: Ελλάδα
 akaton_url: https://matmath.github.io/akaton.ca
 ---
@@ -12,11 +12,11 @@ akaton_url: https://matmath.github.io/akaton.ca
 <p>First, we had to say bye to the fake Rocher Percé! So we squeeze between it in a tight exit to avoid a 20min detour. </p>
 
 <figure class="wp-block-image size-large">
-<img src="{{ akaton_url }}/images/2022-07_RocherPerce.jpg" alt="" class="wp-image-302"/>
+<img src="{{AKATON_URL}}/images/2022-07_RocherPerce.jpg" alt="" class="wp-image-302"/>
 </figure>
 
 <figure class="wp-block-image size-large">
-<img src="{{ akaton_url }}/images/2022-07-04_ExitHole.jpg" alt="" class="wp-image-297"/>
+<img src="{{AKATON_URL}}/images/2022-07-04_ExitHole.jpg" alt="" class="wp-image-297"/>
 </figure>
 
 <p>We left mid-day and we did a good distance, but the first night shift was super strange. It was the first time we sail at night. And as soon as {{AUTHOR_CESINE}} went to bed the wind started to curl... and curl... die, and pick up again. This and every time you do something at night and cannot see anything since we had a black moon every sound is creepy and amplified 100-fold. But after taking it a few times, the wind had died so it was time to burn Dinosaur. We do go slow so we only burn around 2L/h for a small 4N/h. the shaft being slightly damaged does worry us so we try not to force anything. The worst thing at night is that the wind is gone, but the waves still exist and rock sideways sometimes. </p>
@@ -24,7 +24,7 @@ akaton_url: https://matmath.github.io/akaton.ca
 <p>You know I just mentioned that every sound makes us worry now since we used the engine a lot recently to make the distance? To avoid future problems we did add an extra round anode on the shaft. That way if it fails, it won't get out of the boat this time. Well during the night I kept hearing a tuc tuc tuc tuc...... pause, tuc tuc tuc tuc...... pause, tuc tuc tuc tuc...... pause, so my brain thought that the anode that got loose and is now rubbing on the chair. So when we saw a bay, we stopped mid-water and while drifting I looked under the boat. We got lucky and it seems that it was nothing, so we kept going. </p>
 
 <figure class="wp-block-image size-large">
-<img src="{{ akaton_url }}/images/2022-07-04_sunset_heel.jpg" alt="" class="wp-image-304"/>
+<img src="{{AKATON_URL}}/images/2022-07-04_sunset_heel.jpg" alt="" class="wp-image-304"/>
 </figure>
 
 <p> it was the first time {{AUTHOR_CESINE}} saw a clear definition between slow and high wind on the Sea. We did good and we closed most of the sails in preparation for that wind gust that we saw in the distance. We felt it hit, it was crazy but at least we now have wind and strong wind again so we sell the rest of the day to the other island. We could clearly see the wind twist around the island and how it just curved and help us sometimes or annoy us other times.</p>
@@ -38,11 +38,11 @@ akaton_url: https://matmath.github.io/akaton.ca
 <p>The plan this time was to wake up early, motor out of the bay while we cook breakfast and once we're outside the mountain range we can put the sail up if there's wind and sail for two days straight to Corfu. We had another day of typical Mediterranean wind, which means a lot of wind... and then dead calm... and then a bit of wind... and then perfect wind... and then a storm at night. The storm wind was exactly in front of us and we did no distance in 4h... so because of that, we decided... "fuck it"!!! We decided to change course and anchor in the middle of the night in Anchorage which we'd never been to before.  Anchoring during the day is complicated but then anchoring at night is such another level!!! We use a massive flashlight to light up some of the boats since we could not figure out the distance and because we don't wanna run into anybody. We found a spot, we anchored and we pray that nothing would be bad by the morning. The problem in a Bay with no winds is that you have no idea where the anchor is!!! It could be 90° from the boat but there's no way of knowing since all boats rotate randomly (or at least do not extend their chain). We were lucky <strong>this</strong> time. </p>
 
 <figure class="wp-block-image size-large">
-<img src="{{ akaton_url }}/images/2022-07-04_nightAnchor.jpg" alt="" class="wp-image-301"/>
+<img src="{{AKATON_URL}}/images/2022-07-04_nightAnchor.jpg" alt="" class="wp-image-301"/>
 </figure>
 
 <figure class="wp-block-image size-large">
-<img src="{{ akaton_url }}/images/2022-07-04_topHillbrokenKnee.jpg" alt="" class="wp-image-296"/>
+<img src="{{AKATON_URL}}/images/2022-07-04_topHillbrokenKnee.jpg" alt="" class="wp-image-296"/>
 </figure>
 
 <h2>Next: Corfu... right?</h2>
@@ -50,13 +50,13 @@ akaton_url: https://matmath.github.io/akaton.ca
 <p>We are now half a day away from Corfu should we should make it 🤣. We had an early morning and did indeed reach it by going really close to Albania on a few tacks. We even made it a few days early so we anchor in a massive bay with soooooo many other boats. But it was an easy large bay. We did Shopping, visiting &amp; stuff even if {{AUTHOR_CESINE}} was slightly injured. (another post). </p>
 
 <figure class="wp-block-image size-large">
-<img src="{{ akaton_url }}/images/2022-07-04_corfu_pano.jpg" alt="" class="wp-image-299"/>
+<img src="{{AKATON_URL}}/images/2022-07-04_corfu_pano.jpg" alt="" class="wp-image-299"/>
 </figure>
 
 <h2>Checkout and go, easy peasy... right? </h2>
 
 <figure class="wp-block-image size-large">
-<img src="{{ akaton_url }}/images/2022-07-04_corfu_marina.jpg" alt="" class="wp-image-303"/>
+<img src="{{AKATON_URL}}/images/2022-07-04_corfu_marina.jpg" alt="" class="wp-image-303"/>
 <figcaption class="wp-element-caption">First time in a real marina!?!</figcaption>
 </figure>
 
@@ -71,11 +71,11 @@ akaton_url: https://matmath.github.io/akaton.ca
 <p>The weather was predicted to be kind of rough, but manageable, and we had no choice... so we decided to just head back to the boat straight pack our shit and leave!!! The problem is the weather was kind of rough, but we were protected by mountains so we had a heavy wind but no heavy sea state... yet!!! We zigzagged our way outside of Corfu and towards Albania in a strong beam reach, it was Glorious and fast!!! When we hit the Albanian channel it was a whole other problem because now we were against the wind in a strong Sea state (no mountain blocking the waves building up from Italy). We are talking of 3m wave with 30-35kn of wind against us!!! We again made little distance and tried to avoid fishing net it was not a pleasant evening, all that while we were deploying at my work in production and we had a production error, so I had to spend a few hours on and off downstairs debugging the stuff. On top of this, we almost ram another sailboat that was motoring without anyone at the helm on autopilot!?!?! Let's just say timeline and sailboat are the worst enemies 😡🤬. </p>
 
 <figure class="wp-block-image size-large">
-<img src="{{ akaton_url }}/images/2022-07-15_Bar.jpg" alt="" class="wp-image-300"/>
+<img src="{{AKATON_URL}}/images/2022-07-15_Bar.jpg" alt="" class="wp-image-300"/>
 </figure>
 
 <figure class="wp-block-image size-large">
-<img src="{{ akaton_url }}/images/2022-07_Montenegro.jpg" alt="" class="wp-image-298"/>
+<img src="{{AKATON_URL}}/images/2022-07_Montenegro.jpg" alt="" class="wp-image-298"/>
 </figure>
 
 <h2 class="has-text-align-center">But at least we made it to Montenegro!!!</h2>

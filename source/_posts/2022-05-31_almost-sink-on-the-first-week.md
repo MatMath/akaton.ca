@@ -15,30 +15,30 @@ akaton_url: https://matmath.github.io/akaton.ca
 
 <p>Before we start, let's talk about our sailing experience. We both learned to sail via <a href="http://www.bwss.com" data-type="URL" data-id="www.bwss.com">Bluewater Sailing School</a> Jan-2021, 1 week at sea with a captain learning ASA-101/103/104. We also rented a Sailboat for 2 weeks to go from the Florida keys to Dry Tortuga, It includes a few full-day sails of 60NM, but never any overnight passage. You might say it is NOT a LOT of sailing experience 🙃 and you are right 🤣, but we are far from clueless, we have our carte bateau du quebec did study a lot and tried to learn as much as possible from books and Youtube sailors out there. </p>
 
-<img src="{{akaton_url}}/images/2022-06_loop-map.png">
+<img src="{{AKATON_URL}}/images/2022-06_loop-map.png">
 <figcaption>Shakedown 125 nautical mile loop to Monemvasia and back</figcaption>
 
 <h4>Plaka Πλάκα, Greece</h4>
 
 <p>Plaka was great, lots of place to anchor if the wind is southward. We did spend a few relaxing days in the bay before heading to the local marina. </p>
 
-<img src="{{akaton_url}}/images/2022-06_plaka_collage.jpeg">
+<img src="{{AKATON_URL}}/images/2022-06_plaka_collage.jpeg">
 
 <h4>Mitropoli Μητρόπολη</h4>
 
 <p>Head south to Monemvasia... but the mountains are so big so we did not move much south and we anchored around Μητρόπολη. We also saw tuna swimming next to the boat on crystal clear water... yes TUNA nagging us while we had a fishing line up the back 😒. It was the first time we Med moored, let's just say with crystal clear water we found the rock &amp; cliff super close by. </p>
 
-<img src="{{akaton_url}}/images/2022-06_med-moored.jpg">
+<img src="{{AKATON_URL}}/images/2022-06_med-moored.jpg">
 
-<img src="{{akaton_url}}/images/2022-06_cold_bay.jpg">
+<img src="{{AKATON_URL}}/images/2022-06_cold_bay.jpg">
 
 <h4>Monemvasia Μονεμβασιά</h4>
 
 <p>We finally arrived at Μονεμβασιά, another gorgeous day as usual. We had 2 great days exploring the city waiting for the storm back (Yep... more on this later). Relaxing day of drinking, hiking, shopping, sweating, swimming...</p>
 
-<img src="{{akaton_url}}/images/2022-06-Momenvasia_city.jpeg">
+<img src="{{AKATON_URL}}/images/2022-06-Momenvasia_city.jpeg">
 
-<img src="{{akaton_url}}/images/2022-06_Momenvasia_collage.jpg">
+<img src="{{AKATON_URL}}/images/2022-06_Momenvasia_collage.jpg">
 
 <h4>The Story</h4>
 

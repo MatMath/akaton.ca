@@ -41,7 +41,7 @@ akaton_url: https://matmath.github.io/akaton.ca
 
 <h2 style="font-size:22px">Result:</h2>
 
-<img src="{{ akaton_url }}/images/2022-03_finding-a-boat_big.png">
+<img src="{{AKATON_URL}}/images/2022-03_finding-a-boat_big.png">
 <figcaption class="wp-element-caption">Hahaha Nop!</figcaption>
 </figure>
 

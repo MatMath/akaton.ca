@@ -7,7 +7,9 @@ akaton.ca
 Export the authors names
 
 ```bash
-export AUTHOR_MATMATH=mathmath; export AUTHOR_CESINE=cesine;
+export AUTHOR_MATMATH=mathmath;
+export AUTHOR_CESINE=cesine;
+export AKATON_URL=https://matmath.github.io/akaton.ca;
 ```
 
 # How to commit
