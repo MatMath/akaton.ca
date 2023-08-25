@@ -4,9 +4,10 @@
   "private": true,
   "scripts": {
     "build": "hexo generate",
-    "prebuild": "npm run build:authors",
+    "prebuild": "npm run build:authors;npm run build:url",
     "clean": "hexo clean",
     "deploy": "hexo deploy",
+    "build:url": "./replace-config.sh {{AKATON_URL}} ${AKATON_URL} source;",
     "build:authors": "./replace-config.sh {{AUTHOR_MATMATH}} ${AUTHOR_MATMATH}; ./replace-config.sh {{AUTHOR_CESINE}} ${AUTHOR_CESINE}",
     "build:authors:undo": "./replace-config.sh ${AUTHOR_MATMATH} {{AUTHOR_MATMATH}} ; ./replace-config.sh ${AUTHOR_CESINE} {{AUTHOR_CESINE}}",
     "server": "hexo server",
