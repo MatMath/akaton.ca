@@ -1,10 +1,9 @@
 ---
 title: Almost sinking on first week
 date: 2022-05-31
-cover_index: https://matmath.github.io/akaton.ca/images/2022-06_loop-map.png
+cover_index: {{AKATON_URL}}/images/2022-06_loop-map.png
 # cover_detail: /images/cover.jpg
 tags: Ελλάδα
-akaton_url: https://matmath.github.io/akaton.ca
 ---
 
 <h3>What happened???</h3>

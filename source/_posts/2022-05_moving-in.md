@@ -4,7 +4,6 @@ title: Moving in
 # cover_detail: /images/cover.jpg
 date: 2022-05-20
 tags: Ελλάδα
-akaton_url: https://matmath.github.io/akaton.ca
 ---
 
 <h2 style="font-size:22px">Boring details here:</h2>

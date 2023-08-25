@@ -1,7 +1,7 @@
 ---
 title: The Boat!
 date: 2022-04-03
-cover_index: https://matmath.github.io/akaton.ca/images/2022-05_akaton_icon.jpg
+cover_index: {{AKATON_URL}}/images/2022-05_akaton_icon.jpg
 # cover_detail: /images/cover.jpg
 tags: Ελλάδα
 ---
