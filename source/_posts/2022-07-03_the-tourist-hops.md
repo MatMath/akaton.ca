@@ -1,7 +1,7 @@
 ---
 title: The Tourist Hops
 date: 2022-07-03
-# cover_index: /images/box1.jpg
+cover_index: {{AKATON_URL}}/images/toward_exit_greece.jpg
 # cover_detail: /images/cover.jpg
 tags: Ελλάδα
 ---

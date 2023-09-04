@@ -1,8 +1,8 @@
 ---
 title: The great escape!
+cover_index: {{AKATON_URL}}/images/exit-greece.jpg
+cover_detail: {{AKATON_URL}}/images/sunset_cover.jpg
 date: 2022-07-15
-# cover_index: {{AKATON_URL}}/images/box1.jpg
-# cover_detail: {{AKATON_URL}}/images/cover.jpg
 tags: Ελλάδα
 ---
 
@@ -11,11 +11,11 @@ tags: Ελλάδα
 <p>First, we had to say bye to the fake Rocher Percé! So we squeeze between it in a tight exit to avoid a 20min detour. </p>
 
 <figure class="wp-block-image size-large">
-<img src="{{AKATON_URL}}/images/2022-07_RocherPerce.jpg" alt="" class="wp-image-302"/>
+<img src="{{AKATON_URL}}/images/2022-07_RocherPerce.jpg" alt="" class="custom"/>
 </figure>
 
 <figure class="wp-block-image size-large">
-<img src="{{AKATON_URL}}/images/2022-07-04_ExitHole.jpg" alt="" class="wp-image-297"/>
+<img src="{{AKATON_URL}}/images/2022-07-04_ExitHole.jpg" alt="" class="custom"/>
 </figure>
 
 <p>We left mid-day and we did a good distance, but the first night shift was super strange. It was the first time we sail at night. And as soon as {{AUTHOR_CESINE}} went to bed the wind started to curl... and curl... die, and pick up again. This and every time you do something at night and cannot see anything since we had a black moon every sound is creepy and amplified 100-fold. But after taking it a few times, the wind had died so it was time to burn Dinosaur. We do go slow so we only burn around 2L/h for a small 4N/h. the shaft being slightly damaged does worry us so we try not to force anything. The worst thing at night is that the wind is gone, but the waves still exist and rock sideways sometimes. </p>
@@ -23,7 +23,7 @@ tags: Ελλάδα
 <p>You know I just mentioned that every sound makes us worry now since we used the engine a lot recently to make the distance? To avoid future problems we did add an extra round anode on the shaft. That way if it fails, it won't get out of the boat this time. Well during the night I kept hearing a tuc tuc tuc tuc...... pause, tuc tuc tuc tuc...... pause, tuc tuc tuc tuc...... pause, so my brain thought that the anode that got loose and is now rubbing on the chair. So when we saw a bay, we stopped mid-water and while drifting I looked under the boat. We got lucky and it seems that it was nothing, so we kept going. </p>
 
 <figure class="wp-block-image size-large">
-<img src="{{AKATON_URL}}/images/2022-07-04_sunset_heel.jpg" alt="" class="wp-image-304"/>
+<img src="{{AKATON_URL}}/images/2022-07-04_sunset_heel.jpg" alt="" class="custom"/>
 </figure>
 
 <p> it was the first time {{AUTHOR_CESINE}} saw a clear definition between slow and high wind on the Sea. We did good and we closed most of the sails in preparation for that wind gust that we saw in the distance. We felt it hit, it was crazy but at least we now have wind and strong wind again so we sell the rest of the day to the other island. We could clearly see the wind twist around the island and how it just curved and help us sometimes or annoy us other times.</p>

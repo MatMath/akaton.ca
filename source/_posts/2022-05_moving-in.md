@@ -1,6 +1,6 @@
 ---
 title: Moving in
-# cover_index: /images/box1.jpg
+cover_index: {{AKATON_URL}}/images/2022-05/moving-1-1024x768.jpg
 # cover_detail: /images/cover.jpg
 date: 2022-05-20
 tags: Ελλάδα
