@@ -17,7 +17,7 @@ else
         if [ "$(uname)" == "Darwin" ]; then
             sed -i '' "s/${placeholder}/${value}/" $file
         else
-            sed -i "s/${placeholder}/${value}/" $file
+            sed -i "s;${placeholder};${value};" "$file"
         fi
         echo "Replaced ${placeholder} with ${value} in ${directory}"
     done
