@@ -22,8 +22,8 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
       - run: npm ci
-      - run: AUTHOR_MATMATH=${{ secrets.AUTHOR_MATMATH }} AUTHOR_CESINE=${{ secrets.AUTHOR_CESINE }} npm run build:authors
+      - run: AKATON_URL=${{ secrets.AKATON_URL }} AUTHOR_MATMATH=${{ secrets.AUTHOR_MATMATH }}  AUTHOR_CESINE=${{ secrets.AUTHOR_CESINE }} npm run build:authors
       - run: npm run build
       - run: git diff
-      - run: AUTHOR_MATMATH=${{ secrets.AUTHOR_MATMATH }} AUTHOR_CESINE=${{ secrets.AUTHOR_CESINE }} npm run build:authors:undo
+      - run: AKATON_URL=${{ secrets.AKATON_URL }} AUTHOR_MATMATH=${{ secrets.AUTHOR_MATMATH }}  AUTHOR_CESINE=${{ secrets.AUTHOR_CESINE }} npm run build:authors:undo
       - run: npm test

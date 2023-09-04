@@ -1,8 +1,17 @@
 #!/bin/bash
 
+# set -x
+
 placeholder="$1"
 value="$2"
 directory="$3"
+
+if [ $value == "source" ]; then
+    echo "$placeholder was empty"
+    exit 1
+else
+    echo "$placeholder was not empty $value"
+fi
 
 if [ -z "$directory" ]; then
     if [ "$(uname)" == "Darwin" ]; then
