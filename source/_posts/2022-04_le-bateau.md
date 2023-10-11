@@ -6,6 +6,7 @@ cover_index: {{AKATON_URL}}/images/2022-05_akaton_icon.jpg
 tags: Ελλάδα
 ---
 
+<div><strong>Experience:</strong> 260NM (Nautical Miles) / ~67h sailling</div>
 <p>As a great sailor said, if the boat float it's a 10 -- Captain Q</p>
 
 <h2>Jeanneau - Sun Odyssey 42.2</h2>

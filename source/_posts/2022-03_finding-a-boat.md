@@ -6,6 +6,7 @@ cover_index: {{AKATON_URL}}/images/2022-03_finding-a-boat_big_icon.png
 tags: Montréal
 ---
 
+<div><strong>Experience:</strong> 260NM (Nautical Miles) / ~67h sailling (yes 1 week learning and 2 week renting a boat)</div>
 <h2 style="font-size:24px">Where did it start?</h2>
 
 <p>Maybe 5-6 years ago we started to look at sailing channels, one I still remember was titled: “<a href="https://youtu.be/H7bCn58-_GU?t=240">Do not buy a sailboat</a>” which convinced us ironically to start the rabbit hole of boats. We went from looking at the adventure to people <a href="https://youtu.be/ZQZOAlcd_vE?t=524">restoring wooden sailboats</a> with <a href="https://youtu.be/4XoeGV2KhGc?t=446">Fiberglass repair</a>. We were always more interested in how things can build &amp; the process than the adventure itself. So when we started looking at the market, we were looking as much as Project to Perfect sailboat. This also creates a problem in that there is a lot to look at and it's really hard to compare one vs the other.</p>
