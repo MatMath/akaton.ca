@@ -107,11 +107,6 @@ susbtitle_secondary: Etiam quis viverra lorem, in semper lorem. Sed nisl arcu eu
 
 The About section's text in the footer is configured in the theme's `_config.yml`.
 
-```
-# Footer About Section
-about_footer: This theme was initially developed by HTML5 Templates and adapted for Hexo by Jonathan Klughertz.
-```
-
 ### Default post title
 
 The default post title (used when no title is specified) is configured in the theme's `_config.yml`.

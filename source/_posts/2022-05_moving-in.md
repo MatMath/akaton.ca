@@ -1,11 +1,12 @@
 ---
 title: Moving in
-# cover_index: /images/box1.jpg
+cover_index: {{AKATON_URL}}/images/2022-05/moving-1-1024x768.jpg
 # cover_detail: /images/cover.jpg
 date: 2022-05-20
 tags: Ελλάδα
 ---
 
+<div><strong>Experience:</strong> 260NM (Nautical Miles) / ~67h sailling</div>
 <h2 style="font-size:22px">Boring details here:</h2>
 
 <p>Registering a boat in Canada would mean the boat would need to exit the Eurozone every 18month otherwise we need to pay tax 20% on it. So the goal is always not to pay Tax 😏. </p>

@@ -24,7 +24,7 @@ else
     find "$directory" -type f -print0 | while IFS= read -r -d $'\0' file; do
         echo $file
         if [ "$(uname)" == "Darwin" ]; then
-            sed -i '' "s/${placeholder}/${value}/" $file
+            sed -i '' "s;${placeholder};${value};" $file
         else
             sed -i "s;${placeholder};${value};" "$file"
         fi

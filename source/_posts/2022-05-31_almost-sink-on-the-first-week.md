@@ -5,7 +5,7 @@ cover_index: {{AKATON_URL}}/images/2022-06_loop-map.png
 # cover_detail: /images/cover.jpg
 tags: Ελλάδα
 ---
-
+<div><strong>Experience:</strong> 270NM (Nautical Miles)</div>
 <h3>What happened???</h3>
 <p>Did we hit the bottom? Another ship? No, we did not hit anything! You have to read to know more! (or skip to the bottom for the impatient)</p>
 <p>We just got our paperwork &amp; insurance solved, and after being stuck at anchor for 1 month we are MORE than ready to head out.  The plan is to go around the "Argolic Golf" for a few hops for a sea trial of the boat. </p>

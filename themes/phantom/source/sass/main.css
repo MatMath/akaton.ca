@@ -3354,3 +3354,9 @@
 			}
 
 		}
+
+/* Custom CSS from Mat */
+.max-width-image > img {
+	width: 100%;
+	max-width: 1000px;
+}
