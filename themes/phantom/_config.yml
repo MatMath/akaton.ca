@@ -5,7 +5,7 @@ menu:
   About: /about.html
 
 # Logo Image Source
-logo_src: /images/icon48.png
+logo_src: http://akaton.ca/images/icon48.png
 
 # Theme Main Subtitle
 subtitle_main: This is Akaton, our little adventure log book.
