@@ -5,7 +5,7 @@ cover_index: {{AKATON_URL}}/images/2022-06_loop-map.png
 # cover_detail: /images/cover.jpg
 tags: Ελλάδα
 ---
-
+<p>By: {{AUTHOR_MATMATH}}</p>
 <div><strong>Experience:</strong> 270NM (Nautical Miles)</div>
 <h3>What happened???</h3>
 <p>Did we hit the bottom? Another ship? No, we did not hit anything! You have to read to know more! (or skip to the bottom for the impatient)</p>

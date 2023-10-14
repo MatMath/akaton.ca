@@ -6,6 +6,7 @@ cover_index: {{AKATON_URL}}/images/toward_exit_greece.jpg
 tags: Ελλάδα
 ---
 
+<p>By: {{AUTHOR_MATMATH}}</p>
 <div><strong>Experience:</strong> 463NM</div>
 <p>All sailors know that sailing should never be done on a time schedule. BUT… we only have 90day in Schengen and we were toward the end of it, but far far far far away from the border. We had friends arriving on June-26 but we also had to exit the country on July-13. We had 2 massive plans, direction Croatia via Corfu or direction Turkey via the Aegean sea. We decided to go north this year.</p>
 
