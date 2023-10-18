@@ -1,8 +1,10 @@
 # Header
 menu:
   Home: /
+  About: /about
+  Places: /places
+  Calendier: /calendrier
   Archives: /archives
-  About: /about.html
 
 # Logo Image Source
 logo_src: https://matmath.github.io/akaton.ca/images/icon48.png
